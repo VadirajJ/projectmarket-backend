@@ -735,3 +735,23 @@ function playCurrentVideo(swiper) {
     video.play().catch(() => {});
   }
 }
+
+// watsapp//
+
+function toggleWhatsApp() {
+  document.getElementById("whatsappPopup").classList.toggle("show");
+}
+  
+// about //
+
+const btn = document.getElementById("toggleTeam");
+const team = document.getElementById("teamWrapper");
+
+btn.addEventListener("click", () => {
+  team.classList.toggle("show");
+
+  btn.textContent = team.classList.contains("show")
+    ? "Hide Team"
+    : "Meet Our Team";
+});
+

@@ -166,17 +166,19 @@ def home():
 
 # /////////// plans pdf
 
-from flask import send_from_directory
+# from flask import send_from_directory
 
-@app.route("/download-plans")
-def download_plans():
-    return send_from_directory(
-        directory="static",
-        path="CoreDe_Service_Plans.pdf",
-        as_attachment=True
-    )
+# @app.route("/download-plans")
+# def download_plans():
+#     return send_from_directory(
+#         directory="static",
+#         path="CoreDe_Service_Plans.pdf",
+#         as_attachment=True
+#     )
 
 
-
+@app.route("/about")
+def about():
+    return render_template("about.html")
 if __name__ == "__main__":
     app.run(debug=True)

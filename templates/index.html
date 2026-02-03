@@ -276,7 +276,6 @@
             <ul>
               <li><a href="#">AI & Machine Learning</a></li>
               <li><a href="#">Chatbot Development</a></li>
-              <li><a href="#">Blockchain Solutions</a></li>
               <li><a href="#">IoT Applications</a></li>
             </ul>
           </div>
@@ -291,12 +290,12 @@
 
   <div class="header-right">
   <button class="quote-btn">GET QUOTE</button>
-  <a href="/static/CoreDe Payment Plans.pdf" download class="plans-btn">
+  <!--<a href="/static/CoreDe Payment Plans.pdf" download class="plans-btn">
   PLANS
 </a>
   <button class="mobile-menu-btn">
     <i class="fas fa-bars"></i>
-  </button>
+  </button>>
 </div>
 <!-- Plans Popup Modal -->
  <!--div id="plansPopup" class="popup-overlay">
@@ -564,17 +563,53 @@
       </div>
     </div>
   </section>
-<a
-  href="https://wa.me/9008110807?text=Hello%20CoreDe%20Innovation,%20I%20want%20more%20information"
-  class="whatsapp-float"
-  target="_blank"
-  title="Chat on WhatsApp">
-  <img
-    src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-    alt="WhatsApp"
-    width="55"
-    height="55">
+<a href="javascript:void(0)" class="whatsapp-float" onclick="toggleWhatsApp()">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="55">
 </a>
+
+<!-- Instagram (LEFT SIDE) -->
+<!-- Social Icons Container (RIGHT) -->
+<div class="social-right">
+
+  <!-- Instagram -->
+  <a href="https://www.instagram.com/corede.co?igsh=aXB4ZjZyeHNlcnNs"
+     target="_blank"
+     title="Instagram">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+         alt="Instagram">
+  </a>
+
+  <!-- YouTube -->
+ <a href="https://youtube.com/@coredeproduction?si=AOtM0aXHtrDuknqD"
+   target="_blank"
+   title="YouTube">
+  <img
+    src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"
+    alt="YouTube">
+</a>
+
+  <!-- WhatsApp Button -->
+  <button class="whatsapp-btn" onclick="toggleWhatsApp()" title="WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+         alt="WhatsApp">
+  </button>
+
+</div>
+
+<!-- WhatsApp Popup -->
+<div class="whatsapp-popup" id="whatsappPopup">
+  <div class="popup-header">
+    <span>Chat with us</span>
+    <button onclick="toggleWhatsApp()">✕</button>
+  </div>
+
+  <a href="https://wa.me/6360480531?text=Hello%20CoreDe%20Innovation,%20I%20want%20sales%20information"
+     target="_blank">💼 Sales</a>
+
+  <a href="https://wa.me/7795825857?text=Hello%20CoreDe%20Innovation,%20I%20need%20support"
+     target="_blank">🛠 Support</a>
+</div>
+
 
 
 <!--mile add-->
@@ -699,19 +734,27 @@
   <div class="testimonial-container">
 
     <div class="testimonial-card">
-      <img src="images/client1.jpg" alt="Client Photo">
-      <h3>Ravi Kumar</h3>
-      <span>Startup Founder</span>
+      <img src="static/Canada.jpg" alt="Client Photo">
+      <h3>Nakul</h3>
+      <span>Ethereal Voretex Solutions.ca</span>
       <p>
-        Corede Innovation helped us scale our digital presence.
-        Their team is professional, responsive, and result-oriented.
+        Working with Nakul at Ethereal Voretex Solutions.ca was a great experience. He understands client requirements clearly and delivers solutions that are practical, scalable, and on time. A trustworthy professional who genuinely cares about client success.
       </p>
     </div>
 
     <div class="testimonial-card">
-      <img src="images/client2.jpg" alt="Client Photo">
-      <h3>Anita Sharma</h3>
-      <span>Marketing Manager</span>
+      <img src="static/Arsalan.jpg" alt="Client Photo">
+      <h3>Arsalan khan Durrani</h3>
+      <span>Real estate client from Canadian</span>
+      <p>
+        Arsalan Khan Durrani is a seasoned real estate professional specializing in serving Canadian clients. Known for transparency, market expertise, and client-first service, he helps buyers and investors make confident, profitable property decisions.
+      </p>
+    </div>
+
+    <div class="testimonial-card">
+      <img src="static/Gouthamijadav.jpg" alt="Client Photo">
+      <h3>Gouthami Jadhav </h3>
+      <span>Product Digital Marketing: VANA Tayalam</span>
       <p>
         Excellent service and timely delivery.
         We saw real growth in leads within weeks.
@@ -719,9 +762,19 @@
     </div>
 
     <div class="testimonial-card">
-      <img src="images/client3.jpg" alt="Client Photo">
-      <h3>Mohammed Ali</h3>
-      <span>Business Owner</span>
+      <img src="static/Thanuorg.jpg" alt="Client Photo">
+      <h3>Thanu</h3>
+      <span>Marketing Manager</span>
+      <p>
+                Thanu Secrets Offers a Premium Range Skincare care & Hair Growth of Organic Products Designed to Nourish your Beauty Naturally. By avoiding harsh chemicals, These products harness the power of botanical extracts to provide deep healing and long-lasting results.
+
+      </p>
+    </div>
+
+    <div class="testimonial-card">
+      <img src="static/Sunil.jpg" alt="Client Photo">
+      <h3>Sunil Gangadhar</h3>
+      <span>Vinish Foundation Trust</span>
       <p>
         Their strategies are simple, clear, and effective.
         Highly recommended for digital marketing.
@@ -769,7 +822,10 @@
       <div class="footer-section">
         <h4>Quick Links</h4>
         <a href="#">Home</a>
-        <a href="#">About</a>
+        <a href="/about">About</a>
+
+
+
         <a href="#">Services</a>
         <a href="#">Portfolio</a>
         <a href="#">Contact</a>
