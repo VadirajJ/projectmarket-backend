@@ -472,34 +472,48 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /*adds video*/
+// Safe Close Button Functionality
 
-   const overlay = document.getElementById('adOverlay');
-    const video = document.getElementById('myAdVideo');
-    const closeBtn = document.getElementById('closeAdBtn');
+const overlay = document.getElementById("adOverlay");
+const video = document.getElementById("myAdVideo");
+const closeBtn = document.getElementById("closeAdBtn");
 
-    // 1. SHOW AD AUTOMATICALLY ON LOAD
-    window.onload = function() {
-        overlay.style.display = 'flex';
-        
-        // Ensure video plays (Browsers require muted for autoplay)
-        video.play().catch(function(error) {
-            console.log("Autoplay was prevented by browser.");
-        });
-    };
+if (overlay && closeBtn) {
 
-    // 2. CLOSE BUTTON FUNCTIONALITY
-    closeBtn.onclick = function() {
-        overlay.style.display = 'none';
-        video.pause(); // Stop video when closed
-    };
+    closeBtn.addEventListener("click", function () {
+        overlay.style.display = "none";
 
-    // 3. CLOSE IF CLICKED OUTSIDE THE WHITE BOX
-    overlay.onclick = function(event) {
-        if (event.target === overlay) {
-            overlay.style.display = 'none';
+        if (video) {
             video.pause();
         }
-    };
+    });
+
+    overlay.addEventListener("click", function (event) {
+        if (event.target === overlay) {
+            overlay.style.display = "none";
+
+            if (video) {
+                video.pause();
+            }
+        }
+    });
+
+}
+
+
+    // // 2. CLOSE BUTTON FUNCTIONALITY
+    // closeBtn.onclick = function() {
+    //     overlay.style.display = 'none';
+    //     video.pause(); // Stop video when closed
+    // };
+
+    // // 3. CLOSE IF CLICKED OUTSIDE THE WHITE BOX
+    // overlay.onclick = function(event) {
+    //     if (event.target === overlay) {
+    //         overlay.style.display = 'none';
+    //         video.pause();
+    //     }
+    // };
 
 
     /* popup */
@@ -742,16 +756,91 @@ function toggleWhatsApp() {
   document.getElementById("whatsappPopup").classList.toggle("show");
 }
   
-// about //
+// scroll//
+const track = document.querySelector(".logo-track");
+if (track) {
+  track.addEventListener("click", () => {
+    track.style.animationDuration = "8s";
+    setTimeout(() => {
+      track.style.animationDuration = "25s";
+    }, 2000);
+  });
+}
 
-const btn = document.getElementById("toggleTeam");
-const team = document.getElementById("teamWrapper");
+// csss /// 
+// Open mega menu on mobile click
+  document.querySelectorAll('.nav-item.mega-parent').forEach(item => {
+    item.addEventListener('click', function(e) {
+      if (window.innerWidth <= 576 || ('ontouchstart' in window)) {
+        e.preventDefault();
+        // close others
+        document.querySelectorAll('.nav-item.active').forEach(el => {
+          if (el !== this) el.classList.remove('active');
+        });
+        this.classList.toggle('active');
+      }
+    });
+  });
+  // close when tapping outside
+  document.addEventListener('click', e => {
+    if (!e.target.closest('.nav-item')) {
+      document.querySelectorAll('.nav-item.active').forEach(el => {
+        el.classList.remove('active');
+      });
+    }
+  });
 
-btn.addEventListener("click", () => {
-  team.classList.toggle("show");
 
-  btn.textContent = team.classList.contains("show")
-    ? "Hide Team"
-    : "Meet Our Team";
+  // pop up Login //
+  // pop up Login //
+document.addEventListener("DOMContentLoaded", function () {
+
+    const modal = document.getElementById("loginModal");
+    const form = document.getElementById("loginForm");
+
+    // Auto open popup
+    window.addEventListener("load", function () {
+        modal.style.display = "flex";
+    });
+
+    // Close popup
+    window.closeLogin = function () {
+        modal.style.display = "none";
+    };
+
+    // Handle login without redirect
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+
+        fetch("/login", {
+            method: "POST",
+            body: formData
+        })
+        .then(res => res.json())
+        .then(data => {
+            if (data.status === "success") {
+
+                modal.style.display = "none";
+
+                const welcome = document.getElementById("welcomeMessage");
+                welcome.classList.add("show");
+
+                setTimeout(() => {
+                    welcome.classList.remove("show");
+                }, 2500);
+
+            } else {
+                alert("Login failed");
+            }
+        })
+        .catch(err => {
+            console.log(err);
+            alert("Server error");
+        });
+    });
+
 });
 
+  

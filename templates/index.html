@@ -2,8 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>CoreDe – Digital Agency</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CoreDe – software development and digital marketing </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <!-- Add this for better touch handling -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
@@ -12,12 +15,18 @@
 
 <body>
   <!-- HEADER -->
-   
+   <!-- Add this button in your header where you want the hamburger menu -->
+  
+
   <header class="top-header">
+  
+
     <div class="logo">
       <img src="{{ url_for('static', filename='logo.png') }}" alt="CoreDe Logo">
       
     </div>
+    
+
     <nav class="menu">
       <div class="nav-item mega-parent">
         <a href="#">Digital Marketing ▾</a>
@@ -25,12 +34,12 @@
           <div class="mega-column">
             <h4>Digital Marketing</h4>
             <ul>
-              <li><a href="#">Digital Marketing</a></li>
+              <li><a href="#">Influence Marketing</a></li>
               <li><a href="#">Creative Advertising</a></li>
-              <li><a href="#">Email Marketing</a></li>
-              <li><a href="#">B2B Marketing</a></li>
               <li><a href="#">B2B Lead Generation</a></li>
+               <li><a href="#">Affiliate Marketing - AMAZON ADS</a></li>
               <li><a href="#">Online Reputation Management</a></li>
+               <li><a href="#">Email Marketing</a></li>
             </ul>
           </div>
           <div class="mega-column">
@@ -39,23 +48,25 @@
               <li><a href="#">Performance Marketing</a></li>
               <li><a href="#">PPC Services</a></li>
               <li><a href="#">Media Buying</a></li>
+               <li><a href="#">AI Adoption</a></li>
             </ul>
           </div>
           <div class="mega-column">
             <h4>Social Media Marketing</h4>
             <ul>
+               <li><a href="#">Instagram Marketing</a></li>
               <li><a href="#">Facebook Marketing</a></li>
               <li><a href="#">LinkedIn Marketing</a></li>
-              <li><a href="#">YouTube Marketing</a></li>
+              <li><a href="#">YouTube Monitize</a></li>
             </ul>
           </div>
           <div class="mega-column">
-            <h4>Consulting</h4>
+            <h4>Campaigns</h4>
             <ul>
-              <li><a href="#">CMO On Demand</a></li>
-              <li><a href="#">Image Consultant</a></li>
-              <li><a href="#">Marketing Consultant</a></li>
-              <li><a href="#">Database</a></li>
+              <li><a href="#">Search Engine Marketing - SEM</a></li>
+              <li><a href="#">Wider Audiance Reach</a></li>
+              <li><a href="#">Pecision Targeting</a></li>
+              <li><a href="#">Measurable Results & ROI</a></li>
             </ul>
           </div>
           <div class="mega-column">
@@ -97,7 +108,7 @@
             </ul>
           </div>
           <div class="mega-column">
-            <h4>Web Design</h4>
+            <h4>Web Design-without coding</h4>
             <ul>
               <li><a href="#">Website Design</a></li>
               <li><a href="#">Landing Page Design</a></li>
@@ -162,7 +173,7 @@
             <h4>Video & Media</h4>
             <ul>
               <li><a href="#">Video Scripts</a></li>
-              <li><a href="#">Explainer Videos</a></li>
+              <li><a href="#">Concept Scripts</a></li>
               <li><a href="#">Reels & Shorts</a></li>
               <li><a href="#">Podcast Content</a></li>
             </ul>
@@ -188,7 +199,7 @@
               <li><a href="#">Corporate Videos</a></li>
               <li><a href="#">Brand Films</a></li>
               <li><a href="#">Product Videos</a></li>
-              <li><a href="#">Explainer Videos</a></li>
+              <li><a href="#">Concept Videos</a></li>
               <li><a href="#">Testimonial Videos</a></li>
             </ul>
           </div>
@@ -265,6 +276,7 @@
           <div class="mega-column">
             <h4>Cloud & DevOps</h4>
             <ul>
+               <li><a href="#">PowerBI Dashboard Development</a></li>
               <li><a href="#">AWS Services</a></li>
               <li><a href="#">Azure Solutions</a></li>
               <li><a href="#">CI/CD Pipelines</a></li>
@@ -285,91 +297,36 @@
 
     <!--pop up-->
 
-    
-    
 
-  <div class="header-right">
-  <button class="quote-btn">GET QUOTE</button>
-  <!--<a href="/static/CoreDe Payment Plans.pdf" download class="plans-btn">
-  PLANS
-</a>
-  <button class="mobile-menu-btn">
-    <i class="fas fa-bars"></i>
-  </button>>
-</div>
-<!-- Plans Popup Modal -->
- <!--div id="plansPopup" class="popup-overlay">
-  <div class="popup-content">
-    <div class="popup-header">
-    </div>
+    
+ <div class="header-right">
+    <button class="quote-btn">Registration</button>
   </div>
-    <div class="plans-container">
-      <div class="plan-card">
-        <h3>Basic Plan</h3>
-        <div class="price">₹9,999<span>/month</span></div>
-        <ul>
-          <li><i class="fas fa-check"></i> Social Media Management</li>
-          <li><i class="fas fa-check"></i> Basic Website Design</li>
-          <li><i class="fas fa-check"></i> 5 Blog Posts/Month</li>
-          <li><i class="fas fa-check"></i> Email Support</li>
-        </ul>
-        <button class="select-plan">Select Plan</button>
-      </div>
-      <div class="plan-card popular">
-        <div class="popular-badge">MOST POPULAR</div>
-        <h3>Professional Plan</h3>
-        <div class="price">₹24,999<span>/month</span></div>
-        <ul>
-          <li><i class="fas fa-check"></i> Everything in Basic</li>
-          <li><i class="fas fa-check"></i> SEO Optimization</li>
-          <li><i class="fas fa-check"></i> 15 Blog Posts/Month</li>
-          <li><i class="fas fa-check"></i> Video Production (2/month)</li>
-          <li><i class="fas fa-check"></i> Priority Support</li>
-        </ul>
-        <button class="select-plan">Select Plan</button>
-      </div>
-      <div class="plan-card">
-        <h3>Enterprise Plan</h3>
-        <div class="price">₹49,999<span>/month</span></div>
-        <ul>
-          <li><i class="fas fa-check"></i> Everything in Professional</li>
-          <li><i class="fas fa-check"></i> Full Funnel Marketing</li>
-          <li><i class="fas fa-check"></i> Unlimited Content Creation</li>
-          <li><i class="fas fa-check"></i> Custom Tech Solutions</li>
-          <li><i class="fas fa-check"></i> Dedicated Account Manager</li>
-        </ul>
-        <button class="select-plan">Select Plan</button>
-      </div>
-    </div>
-    <div class="popup-footer">
-      <p>Need a custom plan? <a href="#">Contact our sales team</a></p>
-    </div>
-  </div>
-</div>-->
-  </header>
-<!-- ================= CLIENTS LOGO STRIP ================= -->
 
-<!-- ====================================================== -->
+
+
 
   <!-- MOBILE MENU -->
-  <div class="mobile-menu-overlay"></div>
-  <nav class="mobile-menu">
-    <button class="close-menu">
-      <i class="fas fa-times"></i>
-    </button>
-    <div class="mobile-menu-content">
-      <a href="#">Digital Marketing</a>
-      <a href="#">Design</a>
-      <a href="#">Content</a>
-      <a href="#">Production</a>
-      <a href="#">Technology</a>
-      <button class="mobile-quote-btn">GET QUOTE</button>
-      <div class="mobile-phones">
-        <p>Sales: +91 900811080</p>
-        <p>Careers: +91 8905896413</p>
-      </div>
-    </div>
-  </nav>
+
+<!-- MOBILE MENU -->
+</header>
+
+<div class="mobile-menu-overlay"></div>
+
+<div class="mobile-menu">
+  <div class="mobile-menu-content">
+    <a href="#">Digital Marketing</a>
+    <a href="#">Design</a>
+    <a href="#">Content</a>
+    <a href="#">Production</a>
+    <a href="#">Technology</a>
+  </div>
+</div>
+
+
+
+
+
 
   <!-- HERO SLIDER -->
 <section class="hero">
@@ -384,12 +341,26 @@
         <video class="slide-video" src="static/videos/l3.mp4" muted loop playsinline preload="auto"></video>
       </div>
 
-      <div class="swiper-slide">
-        <video class="slide-video" src="static/videos/l4.mp4" muted loop playsinline preload="auto"></video>
-      </div>
-
+      
       <div class="swiper-slide">
         <video class="slide-video" src="static/videos/l2.mp4" muted loop playsinline preload="auto"></video>
+      </div>
+
+       <div class="swiper-slide">
+        <img src="{{ url_for('static', filename='images/digital.png') }}" class="slide-img">
+      </div>
+
+        <div class="swiper-slide">
+        <img src="{{ url_for('static', filename='images/Mobile.png') }}" class="slide-img">
+      </div>
+
+      
+        <div class="swiper-slide">
+        <img src="{{ url_for('static', filename='images/Website.png') }}" class="slide-img">
+      </div>
+
+       <div class="swiper-slide">
+        <img src="{{ url_for('static', filename='images/Socil.png') }}" class="slide-img">
       </div>
 
     </div>
@@ -399,24 +370,34 @@
 </section>
 
     <!-- ADDS video -->
-<div id="adOverlay">
-  <div class="ad-modal">
+<div id="loginModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeLogin()">×</span>
 
-    <!-- Close Button -->
-    <div class="close-btn" id="closeAdBtn">&times;</div>
+    <h3>Login</h3>
 
-    <!-- Video -->
-    <div class="video-container">
-      <iframe
-        id="adVideo"
-        src="https://www.youtube.com/embed/jXk1PTiXWM8?autoplay=1&mute=1"
-        frameborder="0"
-        allow="autoplay; encrypted-media"
-        allowfullscreen>
-      </iframe>
-    </div>    
+   <form id="loginForm">
+    <input type="text" name="first_name" placeholder="First Name" required>
+    <input type="text" name="last_name" placeholder="Last Name" required>
+    <input type="email" name="email" placeholder="Email Address" required>
+    <button type="submit">Login</button>
+</form>
+
+  </div>
+</div>
+<!-- Welcome Animation -->
+<div id="welcomeMessage" class="welcome-box">
+    <div class="welcome-content">
+        <div class="checkmark">✓</div>
+        <h2>Welcome to CoreDe</h2>
+        <p>Login Successful</p>
     </div>
 </div>
+
+
+
+
+
 
 <!--adds no popup-->
 <!-- INLINE AD SECTION -->
@@ -465,7 +446,7 @@
           <div class="service-icon">
             <i class="fas fa-pencil-ruler"></i>
           </div>
-          <h3>UI/UX</h3>
+          <h3>Web Design</h3>
           <p>
             Never miss a customer again! High-performance UI/UX improves
             conversions and customer retention across apps & websites.
@@ -477,7 +458,7 @@
           <div class="service-icon">
             <i class="fas fa-globe"></i>
           </div>
-          <h3>Web</h3>
+          <h3>Software Development</h3>
           <p>
             Premium, high-performance websites and web portals built on secure,
             scalable technologies.
@@ -489,10 +470,9 @@
           <div class="service-icon">
             <i class="fas fa-search"></i>
           </div>
-          <h3>SEO</h3>
+          <h3>Content</h3>
           <p>
-            30–60–90 days SEO strategy to improve organic traffic, visibility and
-            sustainable lead growth.
+           We create high-quality content including website copy, blogs, social media creatives, and marketing materials that tell your story effectively.
           </p>
           <a href="#">Know More <i class="fas fa-arrow-right"></i></a>
         </div>
@@ -501,10 +481,9 @@
           <div class="service-icon">
             <i class="fas fa-hashtag"></i>
           </div>
-          <h3>SMM</h3>
+          <h3>Production</h3>
           <p>
-            Engage and evolve with Social Media Management that converts audiences
-            into loyal followers.
+            We offer product photography, video shoots, and promotional content that enhances your brand’s visual appeal.
           </p>
           <a href="#">Know More <i class="fas fa-arrow-right"></i></a>
         </div>
@@ -523,7 +502,7 @@
     </div>
 
       <div class="quote-box" data-animation="fade-left">
-        <h3>Get Quote</h3>
+        <h3>Registration</h3>
         <form id="quote-form">
           <input type="text" id="name" placeholder="Enter Name" required>
           <div class="error-message" id="name-error"></div>
@@ -534,7 +513,7 @@
           <input type="tel" id="mobile" placeholder=" Mobile Number" required>
           <div class="error-message" id="mobile-error"></div>
           
-          <input type="text" id="company" placeholder="Enter Company Name" required>
+          <input type="text" id="company" placeholder="Enter Business Name" required>
           <div class="error-message" id="company-error"></div>
           
           <input type="text" id="designation" placeholder="Enter Designation" required>
@@ -546,7 +525,6 @@
             <option value="">Select a service</option>
             <option value="Digital Marketing">Digital Marketing</option>
             <option value="Web Development">Web Development</option>
-            <option value="SEO">SEO</option>
             <option value="Mobile App">Mobile App</option>
           </select>
           <div class="error-message" id="service-error"></div>
@@ -563,30 +541,17 @@
       </div>
     </div>
   </section>
-<a href="javascript:void(0)" class="whatsapp-float" onclick="toggleWhatsApp()">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="55">
-</a>
+
 
 <!-- Instagram (LEFT SIDE) -->
 <!-- Social Icons Container (RIGHT) -->
 <div class="social-right">
 
   <!-- Instagram -->
-  <a href="https://www.instagram.com/corede.co?igsh=aXB4ZjZyeHNlcnNs"
-     target="_blank"
-     title="Instagram">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
-         alt="Instagram">
-  </a>
+  
 
   <!-- YouTube -->
- <a href="https://youtube.com/@coredeproduction?si=AOtM0aXHtrDuknqD"
-   target="_blank"
-   title="YouTube">
-  <img
-    src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"
-    alt="YouTube">
-</a>
+
 
   <!-- WhatsApp Button -->
   <button class="whatsapp-btn" onclick="toggleWhatsApp()" title="WhatsApp">
@@ -606,7 +571,7 @@
   <a href="https://wa.me/6360480531?text=Hello%20CoreDe%20Innovation,%20I%20want%20sales%20information"
      target="_blank">💼 Sales</a>
 
-  <a href="https://wa.me/7795825857?text=Hello%20CoreDe%20Innovation,%20I%20need%20support"
+  <a href="https://wa.me/9113814592?text=Hello%20CoreDe%20Innovation,%20I%20need%20support"
      target="_blank">🛠 Support</a>
 </div>
 
@@ -630,55 +595,6 @@
 <!-- TECH / CLIENT LOGOS SLIDER -->
 <!-- ROW 1 : LEFT → RIGHT -->
 <section class="logo-marquee marquee-left">
-  <div class="logo-track">
-    <!-- logos -->
-    <img src="{{ url_for('static', filename='nestle.png') }}">
-    <img src="{{ url_for('static', filename='nescafe.png') }}">
-    <img src="{{ url_for('static', filename='joyalukks.png') }}">
-    <img src="{{ url_for('static', filename='ZeeKannada.png') }}">
-    <img src="{{ url_for('static', filename='Parachute.png') }}">
-    <img src="{{ url_for('static', filename='Refurbox.png') }}">
-    <img src="{{ url_for('static', filename='vortech.png') }}">
-     <img src="{{ url_for('static', filename='ethereal.png') }}">
-     <img src="{{ url_for('static', filename='kekon.png') }}">
-     <img src="{{ url_for('static', filename='vinish.png') }}">
-     <img src="{{ url_for('static', filename='mema.png') }}">
-     <img src="{{ url_for('static', filename='thanu.png') }}">
-     <img src="{{ url_for('static', filename='TMTL.png') }}">
-     <img src="{{ url_for('static', filename='radhika.png') }}">
-     <img src="{{ url_for('static', filename='castle.png') }}">
-     <img src="{{ url_for('static', filename='Cofee day.png') }}">
-     <img src="{{ url_for('static', filename='events.png') }}">
-     <img src="{{ url_for('static', filename='fresh.png') }}">
-     <img src="{{ url_for('static', filename='Glamour.png') }}">
-     <img src="{{ url_for('static', filename='ice.png') }}">
-
-    <!-- SAME logos duplicated -->
-    <img src="{{ url_for('static', filename='nestle.png') }}">
-    <img src="{{ url_for('static', filename='nescafe.png') }}">
-    <img src="{{ url_for('static', filename='joyalukks.png') }}">
-    <img src="{{ url_for('static', filename='ZeeKannada.png') }}">
-    <img src="{{ url_for('static', filename='Parachute.png') }}">
-    <img src="{{ url_for('static', filename='Refurbox.png') }}">
-     <img src="{{ url_for('static', filename='vortech.png') }}">
-     <img src="{{ url_for('static', filename='ethereal.png') }}">
-     <img src="{{ url_for('static', filename='kekon.png') }}">
-     <img src="{{ url_for('static', filename='vinish.png') }}">
-     <img src="{{ url_for('static', filename='mema.png') }}">
-     <img src="{{ url_for('static', filename='thanu.png') }}">
-     <img src="{{ url_for('static', filename='TMTL.png') }}">
-     <img src="{{ url_for('static', filename='radhika.png') }}">
-     <img src="{{ url_for('static', filename='castle.png') }}">
-     <img src="{{ url_for('static', filename='Cofee day.png') }}">
-     <img src="{{ url_for('static', filename='events.png') }}">
-     <img src="{{ url_for('static', filename='fresh.png') }}">
-     <img src="{{ url_for('static', filename='Glamour.png') }}">
-     <img src="{{ url_for('static', filename='ice.png') }}">
-    
-
-
-  </div>
-</section>
 
 <!-- ROW 2 : RIGHT → LEFT -->
 <section class="logo-marquee marquee-right">
@@ -703,25 +619,7 @@
      <img src="{{ url_for('static', filename='Glamour.png') }}">
      <img src="{{ url_for('static', filename='ice.png') }}">
 
-    <img src="{{ url_for('static', filename='Mile.png') }}">
-    <img src="{{ url_for('static', filename='deco.png') }}">
-    <img src="{{ url_for('static', filename='google.png') }}">
-    <img src="{{ url_for('static', filename='Brightex.png') }}">
-    <img src="{{ url_for('static', filename='Refurbox.png') }}">
-    <img src="{{ url_for('static', filename='vortech.png') }}">
-    <img src="{{ url_for('static', filename='ethereal.png') }}">
-    <img src="{{ url_for('static', filename='kekon.png') }}">
-     <img src="{{ url_for('static', filename='vinish.png') }}">
-     <img src="{{ url_for('static', filename='mema.png') }}">
-     <img src="{{ url_for('static', filename='thanu.png') }}">
-     <img src="{{ url_for('static', filename='TMTL.png') }}">
-     <img src="{{ url_for('static', filename='radhika.png') }}">
-     <img src="{{ url_for('static', filename='castle.png') }}">
-     <img src="{{ url_for('static', filename='Cofee day.png') }}">
-     <img src="{{ url_for('static', filename='events.png') }}">
-     <img src="{{ url_for('static', filename='fresh.png') }}">
-     <img src="{{ url_for('static', filename='Glamour.png') }}">
-     <img src="{{ url_for('static', filename='ice.png') }}">
+
   </div>
 </section> 
 
@@ -738,7 +636,7 @@
       <h3>Nakul</h3>
       <span>Ethereal Voretex Solutions.ca</span>
       <p>
-        Working with Nakul at Ethereal Voretex Solutions.ca was a great experience. He understands client requirements clearly and delivers solutions that are practical, scalable, and on time. A trustworthy professional who genuinely cares about client success.
+      “Corede has been an exceptional digital partner for our business in Canada. Their expertise in Google Ads, Meta Ads, SEO, and social media marketing helped us significantly improve our online visibility and lead generation. The team is professional, responsive, and truly focused on delivering measurable results.”
       </p>
     </div>
 
@@ -747,27 +645,16 @@
       <h3>Arsalan khan Durrani</h3>
       <span>Real estate client from Canadian</span>
       <p>
-        Arsalan Khan Durrani is a seasoned real estate professional specializing in serving Canadian clients. Known for transparency, market expertise, and client-first service, he helps buyers and investors make confident, profitable property decisions.
-      </p>
-    </div>
-
-    <div class="testimonial-card">
-      <img src="static/Gouthamijadav.jpg" alt="Client Photo">
-      <h3>Gouthami Jadhav </h3>
-      <span>Product Digital Marketing: VANA Tayalam</span>
-      <p>
-        Excellent service and timely delivery.
-        We saw real growth in leads within weeks.
+        “Corede has done an excellent job managing our social media and paid advertising campaigns in Canada. Their Google Ads and Meta Ads strategies helped us increase our reach, engagement, and lead generation. The team is professional, responsive, and results-driven.”
       </p>
     </div>
 
     <div class="testimonial-card">
       <img src="static/Thanuorg.jpg" alt="Client Photo">
       <h3>Thanu</h3>
-      <span>Marketing Manager</span>
+      <span>Founder-Thanu Secret Organic Products</span>
       <p>
-                Thanu Secrets Offers a Premium Range Skincare care & Hair Growth of Organic Products Designed to Nourish your Beauty Naturally. By avoiding harsh chemicals, These products harness the power of botanical extracts to provide deep healing and long-lasting results.
-
+          “Corede has been a complete digital growth partner for our business. From branding and graphic design to SEO, SEM, social media marketing, and paid campaigns, their team handled everything with great professionalism. Their strategic approach and creative execution have significantly improved our brand presence and lead generation.”
       </p>
     </div>
 
@@ -776,8 +663,8 @@
       <h3>Sunil Gangadhar</h3>
       <span>Vinish Foundation Trust</span>
       <p>
-        Their strategies are simple, clear, and effective.
-        Highly recommended for digital marketing.
+        "Their strategies are simple, clear, and effective.
+        Highly recommended for digital marketing."
       </p>
     </div>
 
@@ -817,18 +704,64 @@
     <div class="footer-content">
       <div class="footer-section">
         <img src="{{ url_for('static', filename='logo.png') }}" alt="CoreDe Logo" class="footer-logo">
-        <p>Leading digital agency providing innovative solutions for global clients.</p>
+        <p>Leading Software Development & Digital Marketing LLP. providing innovative solutions for global clients.</p>
+        
       </div>
+     <div class="social-icons">
+
+      
+   <div class="footer-social">
+    <a href="https://www.instagram.com/corede.co"
+       target="_blank"
+       title="Instagram">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+             alt="Instagram">
+    </a>
+
+    <a href="https://youtube.com/@coredeproduction?si=AOtM0aXHtrDuknqD"
+       target="_blank"
+       title="YouTube">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png"
+             alt="YouTube">
+    </a>
+        <!-- Facebook -->
+    <a href="https://www.facebook.com/corede"
+       target="_blank"
+       title="Facebook">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
+             alt="Facebook">
+    </a>
+
+    <!-- LinkedIn -->
+    <a href="https://www.linkedin.com/company/corede"
+       target="_blank"
+       title="LinkedIn">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
+             alt="LinkedIn">
+    </a>
+
+    <!-- Twitter / X -->
+    <a href="https://twitter.com/corede"
+       target="_blank"
+       title="Twitter">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg"
+             alt="Twitter">
+    </a>
+</div>
+
+</div>
+
+
+
+  
       <div class="footer-section">
         <h4>Quick Links</h4>
         <a href="#">Home</a>
         <a href="/about">About</a>
-
-
-
         <a href="#">Services</a>
         <a href="#">Portfolio</a>
         <a href="#">Contact</a>
+        
       </div>
       <div class="footer-section">
         <h4>Services</h4>
@@ -839,33 +772,37 @@
       </div>
       <div class="footer-section">
         <h4>Contact</h4>
-        <p><i class="fas fa-phone"></i> Sales: +91 900811080</p>
-        <p><i class="fas fa-phone"></i> Careers: +91 8905896413</p>
+        <p><i class="fas fa-phone"></i> Contact us: +91 9008110807</p>
+        <p><i class="fas fa-phone"></i> Contact us: +91 8905896413</p>
         <p><i class="fas fa-envelope"></i> info@corede.com</p>
+        
       </div>
+      
     </div>
+    
 
     <section id="contact">
   <!-- contact form here -->
 
-  <h3>📍 Our Location</h3>
-  <p>Halbhavi Camp, Belagavi</p>
-
-  <div class="map-container">
-    <iframe
-      src="https://www.google.com/maps?q=15.8840352,74.5377698&z=16&output=embed"
-      width="100%"
-      height="350"
-      style="border:0;"
-      allowfullscreen
-      loading="lazy">
-    </iframe>
-  </div>
 </section>
+  <h3>📍 Our Location</h3>
+  <p>CoreDe, Belagavi</p>
+<div class="map-container">
+    <iframe
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3846.410695143532!2d74.5332216!3d15.8850559!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbf61dfee22fc19%3A0x1d962ce845020b5c!2sCoreDe!5e0!3m2!1sen!2sin!4v1707210000000"
+  width="100%"
+  height="400"
+  style="border:0;"
+  allowfullscreen=""
+  loading="lazy"
+  referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+
+  </div>
 
 
     <div class="footer-bottom">
-      <p>&copy; 2024 CoreDe Digital Agency. All rights reserved.</p>
+      <p>&copy; 2026 CoreDe Software development and Digital Marketing LLP. All rights reserved.</p>
     </div>
   </footer>
 

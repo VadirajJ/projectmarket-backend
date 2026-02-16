@@ -1,70 +1,12 @@
-# from flask import Flask, request, jsonify, render_template
-# from flask_cors import CORS
-# from db import get_db_connection
 
-# app = Flask(__name__)
-# CORS(app)
-
-
-# @app.route("/submit-quote", methods=["POST"])
-# def submit_quote():
-#     try:
-#         data = request.get_json()
-
-#         # Basic validation
-#         required_fields = [
-#             "name", "email", "mobile",
-#             "company", "designation",
-#             "service", "message"
-#         ]
-
-#         for field in required_fields:
-#             if field not in data:
-#                 return jsonify({"error": f"{field} is required"}), 400
-
-#         conn = get_db_connection()
-#         cursor = conn.cursor()
-
-#         query = """
-#             INSERT INTO quotes
-#             (name, email, mobile, company, designation, service, message)
-#             VALUES (%s, %s, %s, %s, %s, %s, %s)
-#         """
-
-#         cursor.execute(query, (
-#             data["name"],
-#             data["email"],
-#             data["mobile"],
-#             data["company"],
-#             data["designation"],
-#             data["service"],
-#             data["message"]
-#         ))
-
-#         conn.commit()
-
-#         cursor.close()
-#         conn.close()
-
-#         return jsonify({"message": "Quote submitted successfully"}), 201
-
-#     except Exception as e:
-#         return jsonify({"error": str(e)}), 500
-
-
-# @app.route("/")
-# def home():
-#     return render_template("index.html")
-
-
-# if __name__ == "__main__":
-#     app.run(debug=True)
 
 from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
 from db import get_db_connection
 import smtplib
 from email.message import EmailMessage
+from db import get_db_connection
+
 
 
 
@@ -73,7 +15,7 @@ CORS(app)
 
 # 🔐 SMTP CONFIG (SENDER EMAIL ONLY)
 SMTP_EMAIL = "support@corede.co"
-SMTP_PASSWORD = "oxzhgquitrqydoce"
+SMTP_PASSWORD = "uooajmpuwlfvjkhd"
 
 
 def send_registration_email(to_email):
@@ -159,26 +101,56 @@ def submit_quote():
             "message": "Database error"
         }), 500
 
+# login popup #
+@app.route("/login", methods=["POST"])
+def login():
+    try:
+        data = request.get_json()
+
+        first_name = data.get("first_name")
+        last_name = data.get("last_name")
+        email = data.get("email")
+
+        if not first_name or not last_name or not email:
+            return jsonify({"status": "error", "message": "Missing fields"}), 400
+
+        conn = get_db_connection()
+        cursor = conn.cursor()
+
+        cursor.execute("SELECT id FROM users WHERE email=%s", (email,))
+        existing_user = cursor.fetchone()
+
+        if existing_user:
+            message = "User already exists"
+        else:
+            cursor.execute("""
+                INSERT INTO users (first_name, last_name, email)
+                VALUES (%s, %s, %s)
+            """, (first_name, last_name, email))
+            conn.commit()
+            message = "User stored"
+
+        cursor.close()
+        conn.close()
+
+        return jsonify({"status": "success", "message": message})
+
+    except Exception as e:
+        print("LOGIN ERROR:", e)
+        return jsonify({"status": "error", "message": str(e)}), 500
+
 
 @app.route("/")
 def home():
     return render_template("index.html")
 
-# /////////// plans pdf
-
-# from flask import send_from_directory
-
-# @app.route("/download-plans")
-# def download_plans():
-#     return send_from_directory(
-#         directory="static",
-#         path="CoreDe_Service_Plans.pdf",
-#         as_attachment=True
-#     )
 
 
 @app.route("/about")
 def about():
     return render_template("about.html")
+
+
+
 if __name__ == "__main__":
     app.run(debug=True)
