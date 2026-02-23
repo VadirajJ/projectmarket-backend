@@ -334,33 +334,38 @@
     <div class="swiper-wrapper">
 
       <div class="swiper-slide">
-        <video class="slide-video" src="static/videos/l5.mp4" muted loop playsinline preload="auto"></video>
+        <picture>
+          <source media="(max-width:768px)" srcset="{{ url_for('static', filename='images/Wow-mobile.png') }}">
+          <img src="{{ url_for('static', filename='images/Wow-mobile.png') }}" class="slide-img">
+        </picture>
       </div>
 
       <div class="swiper-slide">
-        <video class="slide-video" src="static/videos/l3.mp4" muted loop playsinline preload="auto"></video>
+        <picture>
+          <source media="(max-width:768px)" srcset="{{ url_for('static', filename='images/Register-mobile.png') }}">
+          <img src="{{ url_for('static', filename='images/Register-mobile.png') }}" class="slide-img">
+        </picture>
       </div>
 
-      
       <div class="swiper-slide">
-        <video class="slide-video" src="static/videos/l2.mp4" muted loop playsinline preload="auto"></video>
+        <picture>
+          <source media="(max-width:768px)" srcset="{{ url_for('static', filename='images/Pm-mobile.png') }}">
+          <img src="{{ url_for('static', filename='images/Pm-mobile.png') }}" class="slide-img">
+        </picture>
       </div>
 
-       <div class="swiper-slide">
-        <img src="{{ url_for('static', filename='images/digital.png') }}" class="slide-img">
+      <div class="swiper-slide">
+        <picture>
+          <source media="(max-width:768px)" srcset="{{ url_for('static', filename='images/Social-mobile.png') }}">
+          <img src="{{ url_for('static', filename='images/Social-mobile.png') }}" class="slide-img">
+        </picture>
       </div>
 
-        <div class="swiper-slide">
-        <img src="{{ url_for('static', filename='images/Mobile.png') }}" class="slide-img">
-      </div>
-
-      
-        <div class="swiper-slide">
-        <img src="{{ url_for('static', filename='images/Website.png') }}" class="slide-img">
-      </div>
-
-       <div class="swiper-slide">
-        <img src="{{ url_for('static', filename='images/Socil.png') }}" class="slide-img">
+      <div class="swiper-slide">
+        <picture>
+          <source media="(max-width:768px)" srcset="{{ url_for('static', filename='images/Am-mobile.png') }}">
+          <img src="{{ url_for('static', filename='images/Am-mobile.png') }}" class="slide-img">
+        </picture>
       </div>
 
     </div>
@@ -370,18 +375,43 @@
 </section>
 
     <!-- ADDS video -->
+<!-- Login Modal -->
 <div id="loginModal" class="modal">
   <div class="modal-content">
-    <span class="close-btn" onclick="closeLogin()">×</span>
+    
+    <!-- Close button -->
+    <span class="close-btn" onclick="closeLogin()">&times;</span>
 
     <h3>Login</h3>
 
-   <form id="loginForm">
-    <input type="text" name="first_name" placeholder="First Name" required>
-    <input type="text" name="last_name" placeholder="Last Name" required>
-    <input type="email" name="email" placeholder="Email Address" required>
-    <button type="submit">Login</button>
-</form>
+    <!-- Important: add method and action -->
+    <form id="loginForm" method="POST">
+
+      <input type="text" 
+             name="first_name" 
+             id="first_name"
+             placeholder="First Name" 
+             required>
+
+      <input type="text" 
+             name="last_name" 
+             id="last_name"
+             placeholder="Last Name" 
+             required>
+
+      <input type="email" 
+             name="email" 
+             id="email"
+             placeholder="Email Address" 
+             required>
+
+      <button type="submit">Login</button>
+
+    </form>
+
+  </div>
+</div>
+
 
   </div>
 </div>
@@ -393,6 +423,9 @@
         <p>Login Successful</p>
     </div>
 </div>
+
+
+
 
 
 
@@ -568,13 +601,12 @@
     <button onclick="toggleWhatsApp()">✕</button>
   </div>
 
-  <a href="https://wa.me/6360480531?text=Hello%20CoreDe%20Innovation,%20I%20want%20sales%20information"
+  <a href="https://wa.me/6362730289?text=Hello%20CoreDe%20Innovation,%20I%20want%20sales%20information"
      target="_blank">💼 Sales</a>
 
   <a href="https://wa.me/9113814592?text=Hello%20CoreDe%20Innovation,%20I%20need%20support"
      target="_blank">🛠 Support</a>
 </div>
-
 
 
 <!--mile add-->
@@ -625,49 +657,130 @@
 
 
 <!---clients feedback-->
+<!-- Font Awesome (Stars) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <section class="testimonials">
   <h2>What Our Clients Say</h2>
   <p class="subtitle">Happy clients are the reason we grow stronger every day</p>
 
-  <div class="testimonial-container">
+  <div class="slider">
+    <div class="testimonial-track">
 
-    <div class="testimonial-card">
-      <img src="static/Canada.jpg" alt="Client Photo">
-      <h3>Nakul</h3>
-      <span>Ethereal Voretex Solutions.ca</span>
-      <p>
-      “Corede has been an exceptional digital partner for our business in Canada. Their expertise in Google Ads, Meta Ads, SEO, and social media marketing helped us significantly improve our online visibility and lead generation. The team is professional, responsive, and truly focused on delivering measurable results.”
-      </p>
+      <!-- Client 1 -->
+      <div class="testimonial-card">
+        <img src="static/Canada.jpg">
+        <h3>Nakul</h3>
+        <span>Ethereal Voretex Solutions.ca</span>
+
+        <div class="stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+
+        <p> “Corede has been an exceptional digital partner for our business in Canada. 
+          Their expertise in Google Ads, Meta Ads, SEO, 
+          and social media marketing helped us significantly improve our online visibility and lead generation. 
+          The team is professional, responsive, and truly focused on delivering measurable results.”</p>
+      </div>
+
+      <!-- Client 2 -->
+      <div class="testimonial-card">
+        <img src="static/Arsalan.jpg">
+        <h3>Arsalan Khan Durrani</h3>
+        <span>Real Estate Client</span>
+
+        <div class="stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+
+        <p>
+        “Corede has done an excellent job managing our social media and paid advertising campaigns in Canada. 
+        Their Google Ads and Meta Ads strategies helped us increase our reach, engagement, and lead generation. 
+        The team is professional, responsive, and results-driven.”
+
+</p>
+      </div>
+
+      <!-- Client 3 -->
+      <div class="testimonial-card">
+        <img src="static/Thanuorg.jpg">
+        <h3>Thanu</h3>
+        <span>Founder – Organic Products</span>
+
+        <div class="stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+
+        <p>“Corede has been a complete digital growth partner for our business. 
+          From branding and graphic design to SEO, SEM, social media marketing, and paid campaigns, 
+          their team handled everything with great professionalism. 
+          Their strategic approach and creative execution have significantly improved our brand presence and lead generation.”</p>
+      </div>
+
+      <!-- Client 4 -->
+      <div class="testimonial-card">
+        <img src="static/Sunil.jpg">
+        <h3>Sunil Gangadhar</h3>
+        <span>Vinish Foundation Trust</span>
+
+        <div class="stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+
+        <p>"Their strategies are simple, clear, and effective.
+        Highly recommended for digital marketing."</p>
+      </div>
+
+      <!-- Duplicate for Infinite Scroll -->
+      <div class="testimonial-card">
+        <img src="static/Canada.jpg">
+        <h3>Nakul</h3>
+        <span>Ethereal Voretex Solutions.ca</span>
+        <div class="stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <p>“Corede has been an exceptional digital partner for our business in Canada. 
+          Their expertise in Google Ads, Meta Ads, SEO, and social media marketing helped us significantly improve our online visibility and lead generation. 
+          The team is professional, responsive, and truly focused on delivering measurable results.”</p>
+      </div>
+
+      <div class="testimonial-card">
+        <img src="static/Arsalan.jpg">
+        <h3>Arsalan Khan Durrani</h3>
+        <span>Real Estate Client</span>
+        <div class="stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <p>“Corede has done an excellent job managing our social media and paid advertising campaigns in Canada. 
+          Their Google Ads and Meta Ads strategies helped us increase our reach, engagement, and lead generation. 
+          The team is professional, responsive, and results-driven.”</p>
+      </div>
+
     </div>
-
-    <div class="testimonial-card">
-      <img src="static/Arsalan.jpg" alt="Client Photo">
-      <h3>Arsalan khan Durrani</h3>
-      <span>Real estate client from Canadian</span>
-      <p>
-        “Corede has done an excellent job managing our social media and paid advertising campaigns in Canada. Their Google Ads and Meta Ads strategies helped us increase our reach, engagement, and lead generation. The team is professional, responsive, and results-driven.”
-      </p>
-    </div>
-
-    <div class="testimonial-card">
-      <img src="static/Thanuorg.jpg" alt="Client Photo">
-      <h3>Thanu</h3>
-      <span>Founder-Thanu Secret Organic Products</span>
-      <p>
-          “Corede has been a complete digital growth partner for our business. From branding and graphic design to SEO, SEM, social media marketing, and paid campaigns, their team handled everything with great professionalism. Their strategic approach and creative execution have significantly improved our brand presence and lead generation.”
-      </p>
-    </div>
-
-    <div class="testimonial-card">
-      <img src="static/Sunil.jpg" alt="Client Photo">
-      <h3>Sunil Gangadhar</h3>
-      <span>Vinish Foundation Trust</span>
-      <p>
-        "Their strategies are simple, clear, and effective.
-        Highly recommended for digital marketing."
-      </p>
-    </div>
-
   </div>
 </section>
 
@@ -724,13 +837,6 @@
         <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png"
              alt="YouTube">
     </a>
-        <!-- Facebook -->
-    <a href="https://www.facebook.com/corede"
-       target="_blank"
-       title="Facebook">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
-             alt="Facebook">
-    </a>
 
     <!-- LinkedIn -->
     <a href="https://www.linkedin.com/company/corede"
@@ -741,12 +847,6 @@
     </a>
 
     <!-- Twitter / X -->
-    <a href="https://twitter.com/corede"
-       target="_blank"
-       title="Twitter">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg"
-             alt="Twitter">
-    </a>
 </div>
 
 </div>
@@ -771,8 +871,7 @@
         <a href="#">SEO</a>
       </div>
       <div class="footer-section">
-        <h4>Contact</h4>
-        <p><i class="fas fa-phone"></i> Contact us: +91 9008110807</p>
+        <h4>Contact</h4>        
         <p><i class="fas fa-phone"></i> Contact us: +91 8905896413</p>
         <p><i class="fas fa-envelope"></i> info@corede.com</p>
         

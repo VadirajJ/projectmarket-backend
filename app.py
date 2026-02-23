@@ -105,44 +105,41 @@ def submit_quote():
 @app.route("/login", methods=["POST"])
 def login():
     try:
-        data = request.get_json()
-
-        first_name = data.get("first_name")
-        last_name = data.get("last_name")
-        email = data.get("email")
-
-        if not first_name or not last_name or not email:
-            return jsonify({"status": "error", "message": "Missing fields"}), 400
+        first_name = request.form.get("first_name")
+        last_name = request.form.get("last_name")
+        email = request.form.get("email")
 
         conn = get_db_connection()
+        print("Connected to DB:", conn.server_host)
+
         cursor = conn.cursor()
 
-        cursor.execute("SELECT id FROM users WHERE email=%s", (email,))
-        existing_user = cursor.fetchone()
+        cursor.execute("""
+            INSERT INTO users (first_name, last_name, email)
+            VALUES (%s, %s, %s)
+        """, (first_name, last_name, email))
 
-        if existing_user:
-            message = "User already exists"
-        else:
-            cursor.execute("""
-                INSERT INTO users (first_name, last_name, email)
-                VALUES (%s, %s, %s)
-            """, (first_name, last_name, email))
-            conn.commit()
-            message = "User stored"
+        conn.commit()
+        print("Inserted into Azure DB")
 
         cursor.close()
         conn.close()
 
-        return jsonify({"status": "success", "message": message})
+        return jsonify({"status": "success"})
 
     except Exception as e:
-        print("LOGIN ERROR:", e)
-        return jsonify({"status": "error", "message": str(e)}), 500
-
+        print("DB ERROR:", e)
+        return jsonify({"status": "error"})
+    
+    
+    
+    
+    
 
 @app.route("/")
 def home():
     return render_template("index.html")
+
 
 
 

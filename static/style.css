@@ -612,71 +612,158 @@ body {
 }
 
 /* ==== clients logo with feedback */
+/* ===============================
+   Testimonials Section
+=================================*/
 .testimonials {
-  background: linear-gradient(to right, #0f0f0f, #1a1a1a);
   padding: 80px 20px;
+  background: #f5f5f5;
+}
+
+/* Heading center */
+.testimonials h2,
+.subtitle {
   text-align: center;
-  color: #0b0b0b;
 }
 
 .testimonials h2 {
-  font-size: 36px;
-  color: #f4f4f5;
+  font-size: 32px;
   margin-bottom: 10px;
 }
 
-.testimonials .subtitle {
-  color: #0277f5;
-  margin-bottom: 50px;
-  font-size: 16px;
+.subtitle {
+  color: #666;
+  margin-bottom: 40px;
 }
 
-.testimonial-container {
+/* ===============================
+   Slider
+=================================*/
+.slider {
+  overflow: hidden;
+  width: 100%;
+}
+
+.testimonial-track {
   display: flex;
-  justify-content: center;
-  gap: 25px;
-  flex-wrap: wrap;
+  gap: 30px;
+  width: max-content;
+  animation: scroll 35s linear infinite;
 }
 
+.slider:hover .testimonial-track {
+  animation-play-state: paused;
+}
+
+/* ===============================
+   Wide Card (Main Fix)
+=================================*/
 .testimonial-card {
-  background: #faf9f9;
-  border-radius: 12px;
-  padding: 30px 20px;
-  width: 300px;
-  transition: transform 0.3s, box-shadow 0.3s;
+  min-width: 520px;
+  max-width: 520px;
+  height: auto;      /* important */
+  padding: 25px 30px;
+  border-radius: 18px;
+  background: #fff;
 }
 
+/* Hover */
 .testimonial-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 25px rgb(228, 214, 214);
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
 }
 
-.testimonial-card img {
-  width: 110px;
-  height: 110px;
-  border-radius: 60%;
-  object-fit: cover;
-  border: 3px solid #5a90d7;
-  margin-bottom: 15px;
-}
-
-.testimonial-card h3 {
-  margin: 10px 0 5px;
-  font-size: 20px;
-}
-
-.testimonial-card span {
-  color: #3fa9f5;
+/* ===============================
+   Date
+=================================*/
+.review-date {
   font-size: 14px;
+  color: #999;
 }
 
+/* Title */
+.testimonial-card h3 {
+  font-size: 22px;
+  margin: 5px 0;
+  font-weight: 600;
+}
+
+/* Paragraph */
+/* Paragraph auto display inside card */
 .testimonial-card p {
-  font-size: 15px;
-  color: #4d4b4b;
-  margin-top: 15px;
-  line-height: 1.6;
+  font-size: 16px;
+  color: #555;
+  line-height: 1.7;
+  margin-top: 10px;
+
+  /* Important */
+  width: 100%;
+  text-align: left;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+
+  /* REMOVE any of these if present */
+  /* -webkit-line-clamp */
+  /* height */
+  /* max-height */
 }
 
+/* Image container inside testimonial */
+.testimonial-card img {
+  width: 80px;          /* fixed width */
+  height: 80px;         /* fixed height */
+  border-radius: 50%;   /* circle image */
+  object-fit: cover;    /* crop image properly */
+  object-position: center;
+  margin-bottom: 10px;
+}
+
+.review-bottom img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+/* ===============================
+   Bottom section
+=================================*/
+.review-bottom {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Image */
+.review-bottom img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Name */
+.review-bottom h4 {
+  margin: 0;
+  font-size: 15px;
+}
+
+/* Green square stars */
+.stars i {
+  background: #28a745;
+  color: #fff;
+  font-size: 10px;
+  padding: 4px;
+  margin-right: 2px;
+  border-radius: 2px;
+}
+
+/* ===============================
+   Scroll Animation
+=================================*/
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
 
 
 /* ===== HEADER ===== */
@@ -839,29 +926,53 @@ body {
 }
 
 /* ===== HERO ===== */
+/* ===== HERO ===== */
 .hero {
-  height: 100vh;
-  margin-top: 80px;
+  width: 100%;
+  margin: 0 !important;          /* remove top gap */
+  padding: 0 !important;
+  position: relative;
+  overflow: hidden;
+  height: auto;
 }
 
+/* Swiper full height */
+.heroSwiper,
+.swiper,
+.swiper-wrapper,
+.swiper-slide {
+  width: 100%;
+  height: 100%;
+}
+
+/* Image inside slide */
+.slide-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* If using background image */
 .hero-slide {
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background-size: cover;
   background-position: center;
   position: relative;
   overflow: hidden;
 }
 
+/* Overlay */
 .hero-slide::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(45deg, rgba(0,0,0,0.8), rgba(0,0,0,0.4));
+  inset: 0;
+  background: linear-gradient(45deg, rgba(0,0,0,0.6), rgba(0,0,0,0.2));
 }
 
+/* Content */
 .hero-content {
   position: absolute;
   z-index: 2;
@@ -869,87 +980,16 @@ body {
   left: 10%;
   transform: translateY(-50%);
   max-width: 700px;
-  opacity: 0;
-  animation: fadeIn 1s ease forwards;
-  animation-delay: 0.5s;
 }
 
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-    transform: translateY(-50%) translateX(0);
-  }
-}
-
-.hero-content h1 {
-  font-size: 60px;
-  margin-bottom: 20px;
-  color: #fff;
-  line-height: 1.2;
-  opacity: 0;
-  transform: translateY(30px);
-  animation: slideUp 1s ease forwards;
-}
-
-.hero-content p {
-  font-size: 24px;
-  color: #fff;
-  margin-bottom: 30px;
-  opacity: 0;
-  transform: translateY(30px);
-  animation: slideUp 1s ease forwards;
-  animation-delay: 0.2s;
-}
-
-@keyframes slideUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.hero-btn {
-  padding: 15px 40px;
-  background: linear-gradient(135deg, #3498db, #2980b9);
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 18px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  opacity: 0;
-  transform: translateY(30px);
-  animation: slideUp 1s ease forwards;
-  animation-delay: 0.4s;
-}
-
-.hero-btn:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(52, 152, 219, 0.4);
-}
-
-/* Swiper Controls */
+/* ===== CONTROLS ===== */
 .swiper-button-next,
 .swiper-button-prev {
   color: #3498db !important;
-  width: 60px !important;
-  height: 60px !important;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
+  width: 50px !important;
+  height: 50px !important;
+  background: rgba(255,255,255,0.15);
   border-radius: 50%;
-  transition: all 0.3s ease;
-}
-
-.swiper-button-next:after,
-.swiper-button-prev:after {
-  font-size: 20px !important;
-}
-
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
-  background: rgba(52, 152, 219, 0.2);
-  transform: scale(1.1);
 }
 
 .swiper-pagination-bullet {
@@ -961,6 +1001,93 @@ body {
   background: #3498db !important;
   opacity: 1 !important;
 }
+
+/* ============================= */
+/* ===== RESPONSIVE FIXES ===== */
+/* ============================= */
+
+/* Laptop */
+@media (max-width: 1200px) {
+  .hero {
+    height: 70vh;
+  }
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .hero {
+    height: 60vh;
+  }
+
+  .hero-content h1 {
+    font-size: 40px;
+  }
+
+  .hero-content p {
+    font-size: 18px;
+  }
+}
+
+/* ============================= */
+/* ===== MOBILE (NO GAP) ===== */
+/* ============================= */
+
+
+
+  /* Remove fixed height */
+  .hero {
+    margin-top: 60px;      /* adjust if header height differs */
+    height: auto;
+  }
+
+  /* Let image control height */
+  .heroSwiper,
+  .swiper,
+  .swiper-wrapper,
+  .swiper-slide {
+    height: auto;
+  }
+
+  .slide-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  /* Hide arrows */
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
+
+  /* Content resize */
+  .hero-content {
+    left: 5%;
+    max-width: 90%;
+  }
+
+  .hero-content h1 {
+    font-size: 24px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .hero {
+    margin-top: 55px;
+  }
+
+  .hero-content h1 {
+    font-size: 20px;
+  }
+}
+
+
+
 
 /* ===== SERVICES ===== */
 .services-section {
@@ -2079,3 +2206,6 @@ html, body {
         transform: scale(1);
     }
 }
+
+
+/* chat bot */

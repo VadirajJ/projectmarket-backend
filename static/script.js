@@ -159,7 +159,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     try {
-      const response = await fetch("http://127.0.0.1:5000/submit-quote", {
+      const response = await fetch("/submit-quote", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData)
@@ -793,54 +793,80 @@ if (track) {
 
   // pop up Login //
   // pop up Login //
-document.addEventListener("DOMContentLoaded", function () {
+// Login Popup
+const modal = document.getElementById("loginModal");
+const form = document.getElementById("loginForm");
 
-    const modal = document.getElementById("loginModal");
-    const form = document.getElementById("loginForm");
+if (modal && form) {
 
-    // Auto open popup
-    window.addEventListener("load", function () {
-        modal.style.display = "flex";
-    });
+  window.addEventListener("load", () => {
+    modal.style.display = "flex";
+  });
 
-    // Close popup
-    window.closeLogin = function () {
+  window.closeLogin = () => {
+    modal.style.display = "none";
+  };
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    try {
+      const res = await fetch("/login", {
+        method: "POST",
+        body: formData
+      });
+
+      const data = await res.json();
+
+      if (data.status === "success") {
         modal.style.display = "none";
-    };
 
-    // Handle login without redirect
-    form.addEventListener("submit", function (e) {
-        e.preventDefault();
+        const welcomeBox = document.getElementById("welcomeMessage");
+        if (welcomeBox) {
+          welcomeBox.classList.add("show");
+          setTimeout(() => {
+            welcomeBox.classList.remove("show");
+          }, 2500);
+        }
 
-        const formData = new FormData(form);
+      } else {
+        alert("Login failed");
+      }
 
-        fetch("/login", {
-            method: "POST",
-            body: formData
-        })
-        .then(res => res.json())
-        .then(data => {
-            if (data.status === "success") {
+    } catch (err) {
+      console.log(err);
+      alert("Server error");
+    }
+  });
+}
 
-                modal.style.display = "none";
 
-                const welcome = document.getElementById("welcomeMessage");
-                welcome.classList.add("show");
+// clients slide//
+// const cards = document.querySelectorAll(".testimonial-card");
 
-                setTimeout(() => {
-                    welcome.classList.remove("show");
-                }, 2500);
+// cards.forEach(card => {
+//   card.addEventListener("mousemove", (e) => {
+//     const rect = card.getBoundingClientRect();
+//     const x = e.clientX - rect.left;
+//     const y = e.clientY - rect.top;
 
-            } else {
-                alert("Login failed");
-            }
-        })
-        .catch(err => {
-            console.log(err);
-            alert("Server error");
-        });
-    });
+//     const centerX = rect.width / 2;
+//     const centerY = rect.height / 2;
 
-});
+//     const rotateX = (y - centerY) / 12;
+//     const rotateY = (centerX - x) / 12;
 
-  
+//     card.style.transform =
+//       `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+//   });
+
+//   card.addEventListener("mouseleave", () => {
+//     card.style.transform = "rotateX(0) rotateY(0) scale(1)";
+//   });
+// });
+
+
+
+
