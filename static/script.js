@@ -130,68 +130,74 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* ================= SUBMIT WITH BEAUTIFUL SUCCESS ANIMATIONS ================= */
-  quoteForm.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    if (!validateForm()) return;
+quoteForm.addEventListener("submit", async (e) => {
+  e.preventDefault();
 
-    const originalText = submitBtn.textContent;
-    
-    // Start loading animation
-    submitBtn.textContent = "Submitting...";
-    submitBtn.disabled = true;
-    submitBtn.style.opacity = "0.7";
-    
-    // Add loading dots animation
-    let dots = 0;
-    const loadingInterval = setInterval(() => {
-      dots = (dots + 1) % 4;
-      submitBtn.textContent = "Submitting" + ".".repeat(dots);
-    }, 300);
+  if (!validateForm()) return;
 
-    const formData = {
-      name: nameInput.value.trim(),
-      email: emailInput.value.trim(),
-      mobile: mobileInput.value.trim(),
-      company: companyInput.value.trim(),
-      designation: designationInput.value.trim(),
-      service: serviceSelect.value,
-      message: messageInput.value.trim()
-    };
+  const originalText = "Submit";
+  submitBtn.textContent = "Submitting...";
+  submitBtn.disabled = true;
 
-    try {
-      const response = await fetch("/submit-quote", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData)
-      });
+  const formData = {
+    name: nameInput.value.trim(),
+    email: emailInput.value.trim(),
+    mobile: mobileInput.value.trim(),
+    company: companyInput.value.trim(),
+    designation: designationInput.value.trim(),
+    service: serviceSelect.value,
+    message: messageInput.value.trim()
+  };
 
-      const text = await response.text();
-      clearInterval(loadingInterval);
+  try {
+    const response = await fetch("/submit-quote", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData)
+    });
 
-      if (!response.ok) throw new Error(text || "Server error");
+    const result = await response.json();
 
-      // ✅ SUCCESS! - Show beautiful notification
-      showSuccessNotification("✅ Submitted Successfully!");
-      
-      // Reset form
+    if (result.status === "success") {
+      showSuccessNotification("✅ Registered Successfully!");
       quoteForm.reset();
       clearErrors();
-      
-      // Dance cursor to services section
-      setTimeout(() => {
-        danceCursorToServices();
-      }, 1500);
+    } 
+    else if (result.status === "exists") {
+    showErrorNotification("⚠️ Email already registered. Please login.");
 
-    } catch (err) {
-      clearInterval(loadingInterval);
-      console.error(err);
-      showErrorNotification("❌ Data NOT stored. Check Flask / MySQL.");
-    } finally {
-      submitBtn.textContent = originalText;
-      submitBtn.disabled = false;
-      submitBtn.style.opacity = "1";
+    const loginModal = document.getElementById("loginModal");
+    const loginForm = document.getElementById("loginForm");
+    const loginEmail = document.getElementById("login_email");
+
+    if (loginModal) {
+        loginModal.style.display = "flex";
     }
-  });
+
+    // Clear old login data
+    if (loginForm) {
+        loginForm.reset();
+    }
+
+    // Auto-fill email again
+    if (loginEmail) {
+        loginEmail.value = emailInput.value.trim();
+    }
+}
+    else {
+      showErrorNotification("❌ Something went wrong.");
+    }
+
+  } catch (err) {
+    console.error(err);
+    showErrorNotification("❌ Server error");
+  }
+
+  // 🔹 ALWAYS reset button
+  submitBtn.textContent = originalText;
+  submitBtn.disabled = false;
+});
+
 
   /* ================= BEAUTIFUL SUCCESS NOTIFICATION ================= */
   function showSuccessNotification(message) {
@@ -799,14 +805,17 @@ const form = document.getElementById("loginForm");
 
 if (modal && form) {
 
+  // Auto open login popup when page loads
   window.addEventListener("load", () => {
     modal.style.display = "flex";
   });
 
+  // Close popup
   window.closeLogin = () => {
     modal.style.display = "none";
   };
 
+  // Form submit
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
@@ -820,6 +829,7 @@ if (modal && form) {
 
       const data = await res.json();
 
+      // ===== SUCCESS LOGIN =====
       if (data.status === "success") {
         modal.style.display = "none";
 
@@ -830,17 +840,47 @@ if (modal && form) {
             welcomeBox.classList.remove("show");
           }, 2500);
         }
+      }
 
-      } else {
-        alert("Login failed");
+      // ===== EMAIL NOT REGISTERED =====
+      else if (data.status === "not_found") {
+        const errorBox = document.getElementById("errorMessage");
+        if (errorBox) {
+          errorBox.classList.add("show");
+          setTimeout(() => {
+            errorBox.classList.remove("show");
+          }, 2500);
+        }
+      }
+
+      // ===== OTHER ERROR =====
+      else {
+        showServerError();
       }
 
     } catch (err) {
       console.log(err);
-      alert("Server error");
+      showServerError();
     }
   });
 }
+
+
+// Server error animation
+function showServerError() {
+  const errorBox = document.getElementById("errorMessage");
+  if (errorBox) {
+    errorBox.querySelector("h2").innerText = "Server Error";
+    errorBox.querySelector("p").innerText = "Please try again later";
+
+    errorBox.classList.add("show");
+
+    setTimeout(() => {
+      errorBox.classList.remove("show");
+    }, 2500);
+  }
+}
+
 
 
 // clients slide//

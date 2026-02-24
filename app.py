@@ -52,10 +52,25 @@ def submit_quote():
     try:
         data = request.get_json()
 
-        # 🔹 INSERT INTO DB (PRIMARY TASK)
         conn = get_db_connection()
         cursor = conn.cursor(dictionary=True)
 
+        # 1️⃣ Check email already exists
+        cursor.execute(
+            "SELECT id FROM quotes WHERE email = %s",
+            (data["email"],)
+        )
+        existing_user = cursor.fetchone()
+
+        if existing_user:
+            cursor.close()
+            conn.close()
+            return jsonify({
+                "status": "exists",
+                "message": "Email already registered. Please login."
+            }), 200
+
+        # 2️⃣ Insert if new email
         cursor.execute("""
             INSERT INTO quotes
             (name, email, mobile, company, designation, service, message)
@@ -71,31 +86,17 @@ def submit_quote():
         ))
 
         conn.commit()
-        inserted_id = cursor.lastrowid
-
-        # 🔹 FETCH EMAIL FROM DB ONLY
-        cursor.execute(
-            "SELECT email FROM quotes WHERE id = %s",
-            (inserted_id,)
-        )
-        user = cursor.fetchone()
 
         cursor.close()
         conn.close()
 
-        # 🔹 SEND EMAIL (NON-BLOCKING)
-        try:
-            send_registration_email(user["email"])
-        except Exception as email_error:
-            print("⚠️ Email sending failed:", email_error)
-
         return jsonify({
             "status": "success",
-            "message": "Registration successful. Data stored."
+            "message": "Registration successful"
         }), 201
 
-    except Exception as db_error:
-        print("❌ Database error:", db_error)
+    except Exception as e:
+        print("DB ERROR:", e)
         return jsonify({
             "status": "error",
             "message": "Database error"
@@ -105,30 +106,25 @@ def submit_quote():
 @app.route("/login", methods=["POST"])
 def login():
     try:
-        first_name = request.form.get("first_name")
-        last_name = request.form.get("last_name")
-        email = request.form.get("email")
+        email = request.form.get("gmail")
 
         conn = get_db_connection()
-        print("Connected to DB:", conn.server_host)
-
         cursor = conn.cursor()
 
-        cursor.execute("""
-            INSERT INTO users (first_name, last_name, email)
-            VALUES (%s, %s, %s)
-        """, (first_name, last_name, email))
-
-        conn.commit()
-        print("Inserted into Azure DB")
+        # Check user exists
+        cursor.execute("SELECT * FROM users WHERE email=%s", (email,))
+        user = cursor.fetchone()
 
         cursor.close()
         conn.close()
 
-        return jsonify({"status": "success"})
+        if user:
+            return jsonify({"status": "success"})
+        else:
+            return jsonify({"status": "not_found"})
 
     except Exception as e:
-        print("DB ERROR:", e)
+        print("ERROR:", e)
         return jsonify({"status": "error"})
     
     
