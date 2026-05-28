@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Careers</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<!-- ================= HERO ================= -->
+<section class="career-hero">
+  <div class="hero-content">
+    <span class="badge">● Now Hiring</span>
+
+    <h1>Build the Future with Us</h1>
+
+    <p>
+      At Corede Technologies, we’re looking for passionate, driven individuals
+      to join our team of innovators and creators.
+    </p>
+
+    <a href="#apply" class="hero-btn">
+      View Open Positions ↓
+    </a>
+  </div>
+</section>
+
+
+<!-- ================= WHY JOIN ================= -->
+<section class="why-section">
+  <h2>Why Join Corede Technologies?</h2>
+
+  <p>
+    We offer more than just a job — we offer a career where you can grow and learn.
+  </p>
+
+  <div class="why-cards">
+
+    <div class="why-card">
+      <div class="icon">👥</div>
+      <h3>Great Culture</h3>
+      <p>Collaborative, inclusive environment where every voice is heard.</p>
+    </div>
+
+    <div class="why-card">
+      <div class="icon">💡</div>
+      <h3>Innovation First</h3>
+      <p>Work with cutting-edge technologies and real-world challenges.</p>
+    </div>
+
+    <div class="why-card">
+      <div class="icon">☕</div>
+      <h3>Excellent Perks</h3>
+      <p>Flexible working hours and continuous learning opportunities.</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ================= APPLY SECTION ================= -->
+<section class="apply-section" id="apply">
+
+  <div class="apply-left">
+    <h2>Ready to take the next step?</h2>
+
+    <p>
+      Whether you are experienced or a fresher, we want to hear from you.
+    </p>
+
+    <!-- IT TRAINERS VACANCY -->
+    <div class="vacancy-card">
+      <div class="vacancy-header">
+        <h3>🖥️ IT Trainers</h3>
+        <span class="vacancy-badge it-badge">IT</span>
+      </div>
+
+      <div class="vacancy-content">
+        <p><strong>Position:</strong> Training Instructors (Full-time & Part-time)</p>
+        
+        <div class="requirements">
+          <h4>Required Skills:</h4>
+          <ul>
+            <li>✓ Python, Java, or JavaScript expertise</li>
+            <li>✓ Web Development (HTML, CSS, React)</li>
+            <li>✓ Database Management (MySQL, MongoDB)</li>
+            <li>✓ API Development & REST Services</li>
+            <li>✓ Cloud Platforms (AWS, Azure)</li>
+            <li>✓ Teaching & mentoring experience</li>
+          </ul>
+        </div>
+
+        <div class="benefits">
+          <p><strong>What We Offer:</strong></p>
+          <p>Competitive salary • Flexible hours • Career growth • Training materials provided</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- NON-IT TRAINERS VACANCY -->
+    <div class="vacancy-card">
+      <div class="vacancy-header">
+        <h3>📊 Non-IT Trainers</h3>
+        <span class="vacancy-badge non-it-badge">Non-IT</span>
+      </div>
+
+      <div class="vacancy-content">
+        <p><strong>Position:</strong> Training Instructors (Full-time & Part-time)</p>
+        
+        <div class="requirements">
+          <h4>Required Skills:</h4>
+          <ul>
+            <li>✓ Digital Marketing expertise</li>
+            <li>✓ Business Management knowledge</li>
+            <li>✓ Communication & soft skills</li>
+            <li>✓ Data Analysis & reporting</li>
+            <li>✓ HR & recruitment experience</li>
+            <li>✓ Strong presentation abilities</li>
+          </ul>
+        </div>
+
+        <div class="benefits">
+          <p><strong>What We Offer:</strong></p>
+          <p>Competitive salary • Flexible schedule • Professional development • Team collaboration</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="roles-footer-note">
+      📝 Don't see your role? We accept general applications via the form below.
+    </div>
+  </div>
+
+<div class="apply-form">
+  <h3>APPLICATION FORM</h3>
+
+<form id="careerForm" method="POST" action="/apply" enctype="multipart/form-data">
+
+  <input type="text" id="name" name="name" placeholder="Your Name">
+  <span class="error" id="nameError"></span>
+
+  <input type="email" id="email" name="email" placeholder="Email">
+  <span class="error" id="emailError"></span>
+
+  <input type="tel" id="phone" name="phone" placeholder="Phone">
+  <span class="error" id="phoneError"></span>
+
+  <input type="text" id="position" name="position" placeholder="Position (e.g. Web Developer)">
+  <span class="error" id="positionError"></span>
+
+  <textarea id="message" name="message" placeholder="Message"></textarea>
+  <span class="error" id="messageError"></span>
+
+  <input type="file" id="cv" name="resume">
+
+  <button type="submit">SUBMIT</button>
+
+</form>
+</div>
+
+</section>
+
+
+<!-- JS (always at bottom) -->
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>

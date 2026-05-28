@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17917223846"></script>
+
+<script>
+window.dataLayer = window.dataLayer || [];
+
+function gtag(){
+dataLayer.push(arguments);
+}
+
+gtag('js', new Date());
+
+gtag('config', 'AW-17917223846');
+</script>
+    <title>Internship - CoreDe</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<!-- Navbar same as index -->
+
+<section class="internship-section">
+
+    <div class="internship-header">
+        <span class="badge">🚀 Internship Program</span>
+
+        <h2>
+            Kickstart Your Career With Real-Time Industry Projects
+        </h2>
+
+        <p>
+            Learn from experts, build live projects, and gain practical
+            experience with secure enterprise-level development standards.
+        </p>
+    </div>
+
+    <div class="internship-grid">
+
+        
+
+        <!-- Frontend -->
+        <div class="internship-card" data-course="frontend">
+            
+            <div class="card-shine"></div>
+            
+
+            <div class="card-top">
+                <h3>Frontend Developer Intern</h3>
+
+                <span class="duration">
+                    ⏳ 45 Days
+                </span>
+            </div>
+
+            <div class="skills">
+                HTML • CSS • JavaScript • React
+            </div>
+
+            <p class="card-text">
+                Work on modern responsive UI projects and real-time frontend applications.
+            </p>
+
+            <div class="button-group">
+                <button class="view-details-btn" onclick="openCourseDetails('frontend')">
+                    View Details →
+                </button>
+                <button class="apply-btn" onclick="openApply('Frontend Developer Intern')">
+                    Apply Now
+                </button>
+            </div>
+
+        </div>
+
+        <!-- Backend -->
+        <div class="internship-card" data-course="backend">
+            <div class="card-shine"></div>
+
+            <div class="card-top">
+                <h3>Backend Developer Intern</h3>
+
+                <span class="duration">
+                    ⏳ 45 Days
+                </span>
+            </div>
+
+            <div class="skills">
+                Python • FastAPI • MySQL • APIs
+            </div>
+
+            <p class="card-text">
+                Build scalable backend systems, APIs, authentication, and secure server-side logic.
+            </p>
+
+            <div class="button-group">
+                <button class="view-details-btn" onclick="openCourseDetails('backend')">
+                    View Details →
+                </button>
+                <button class="apply-btn" onclick="openApply('Backend Developer Intern')">
+                    Apply Now
+                </button>
+            </div>
+
+        </div>
+
+        <!-- Full Stack -->
+        <div class="internship-card" data-course="fullstack">
+            <div class="card-shine"></div>
+
+            <div class="card-top">
+                <h3>Full Stack Developer Intern</h3>
+
+                <span class="duration">
+                    ⏳ 45 Days
+                </span>
+            </div>
+
+            <div class="skills">
+               • Python • React • SQL • APIs
+            </div>
+
+            <p class="card-text">
+                Develop secure enterprise applications with payment-ready architecture and authentication best practices.
+            </p>
+
+            <div class="button-group">
+                <button class="view-details-btn" onclick="openCourseDetails('fullstack')">
+                    View Details →
+                </button>
+                <button class="apply-btn" onclick="openApply('Full Stack Developer Intern')">
+                    Apply Now
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Non-IT Internships Section -->
+    <div class="trainer-section">
+        <h2>📊 Non-IT Internship Programs</h2>
+        <p>Master digital marketing, design, business, and professional skills.</p>
+
+        <div class="internship-grid">
+            <!-- 1. Digital Marketing Internship -->
+            <div class="internship-card" data-course="digitalmarketing">
+                <div class="card-shine"></div>
+                <div class="card-top">
+                    <h3>Digital Marketing Internship</h3>
+                    <span class="duration">⏳ 45 Days</span>
+                </div>
+                <div class="skills">Marketing • Content • Strategy • Analytics</div>
+                <p class="card-text">Learn comprehensive digital marketing strategies and campaign management.</p>
+                <div class="button-group">
+                    <button class="view-details-btn" onclick="openCourseDetails('digitalmarketing')">View Details →</button>
+                    <button class="apply-btn" onclick="openApply('Digital Marketing Internship')">Apply Now</button>
+                </div>
+            </div>
+
+            <!-- 2. Meta & Google Ads Internship -->
+            <div class="internship-card" data-course="googleads">
+                <div class="card-shine"></div>
+                <div class="card-top">
+                    <h3>Meta & Google Ads Internship</h3>
+                    <span class="duration">⏳ 45 Days</span>
+                </div>
+                <div class="skills">Google Ads • Meta Ads</div>
+                <p class="card-text">Master paid advertising platforms and optimize ad campaigns for maximum ROI.</p>
+                <div class="button-group">
+                    <button class="view-details-btn" onclick="openCourseDetails('googleads')">View Details →</button>
+                    <button class="apply-btn" onclick="openApply('Meta & Google Ads Internship')">Apply Now</button>
+                </div>
+            </div>
+
+            <!-- 3. Social Media Marketing Internship -->
+            <div class="internship-card" data-course="socialmedia">
+                <div class="card-shine"></div>
+                <div class="card-top">
+                    <h3>Social Media Marketing Internship</h3>
+                    <span class="duration">⏳ 45 Days</span>
+                </div>
+                <div class="skills">Social Media • Content Creation • Engagement • Community</div>
+                <p class="card-text">Build and manage social media presence across all major platforms.</p>
+                <div class="button-group">
+                    <button class="view-details-btn" onclick="openCourseDetails('socialmedia')">View Details →</button>
+                    <button class="apply-btn" onclick="openApply('Social Media Marketing Internship')">Apply Now</button>
+                </div>
+            </div>
+
+            <!-- 4. AI Graphic Design Internship -->
+            <div class="internship-card" data-course="aidesign">
+                <div class="card-shine"></div>
+                <div class="card-top">
+                    <h3>AI Graphic Design Internship</h3>
+                    <span class="duration">⏳ 45 Days</span>
+                </div>
+                <div class="skills">AI Tools • Design • Canva • Figma • Automation</div>
+                <p class="card-text">Create stunning designs using AI-powered tools and modern design software.</p>
+                <div class="button-group">
+                    <button class="view-details-btn" onclick="openCourseDetails('aidesign')">View Details →</button>
+                    <button class="apply-btn" onclick="openApply('AI Graphic Design Internship')">Apply Now</button>
+                </div>
+            </div>
+
+            <!-- 5. AI Video Design Internship -->
+            <div class="internship-card" data-course="aivideo">
+                <div class="card-shine"></div>
+                <div class="card-top">
+                    <h3>AI Video Design Internship</h3>
+                    <span class="duration">⏳ 45 Days</span>
+                </div>
+                <div class="skills">Video Editing • AI Tools • Animation • Effects</div>
+                <p class="card-text">Master video production and AI-powered video design for marketing campaigns.</p>
+                <div class="button-group">
+                    <button class="view-details-btn" onclick="openCourseDetails('aivideo')">View Details →</button>
+                    <button class="apply-btn" onclick="openApply('AI Video Design Internship')">Apply Now</button>
+                </div>
+            </div>
+
+
+
+            <!-- 7. SEO & SEM Internship -->
+            <div class="internship-card" data-course="seosem">
+                <div class="card-shine"></div>
+                <div class="card-top">
+                    <h3>SEO & SEM Internship</h3>
+                    <span class="duration">⏳ 45 Days</span>
+                </div>
+                <div class="skills">SEO • SEM • Keywords • Ranking • Traffic</div>
+                <p class="card-text">Learn search engine optimization and marketing to drive organic and paid traffic.</p>
+                <div class="button-group">
+                    <button class="view-details-btn" onclick="openCourseDetails('seosem')">View Details →</button>
+                    <button class="apply-btn" onclick="openApply('SEO & SEM Internship')">Apply Now</button>
+                </div>
+            </div>
+
+            <!-- 8. Business Operations & Sales Internship -->
+            <div class="internship-card" data-course="operations">
+                <div class="card-shine"></div>
+                <div class="card-top">
+                    <h3>Business Operations & Sales Internship</h3>
+                    <span class="duration">⏳ 45 Days</span>
+                </div>
+                <div class="skills">Sales • Operations • CRM • Business Process</div>
+                <p class="card-text">Develop business operations and sales skills for enterprise growth and customer success.</p>
+                <div class="button-group">
+                    <button class="view-details-btn" onclick="openCourseDetails('operations')">View Details →</button>
+                    <button class="apply-btn" onclick="openApply('Business Operations & Sales Internship')">Apply Now</button>
+                </div>
+            </div>
+
+            <!-- 9. HR Human Resource Internship -->
+            <div class="internship-card" data-course="hrhr">
+                <div class="card-shine"></div>
+                <div class="card-top">
+                    <h3>HR Human Resource Internship</h3>
+                    <span class="duration">⏳ 45 Days</span>
+                </div>
+                <div class="skills">Recruitment • HR • Compliance • Culture • Training</div>
+                <p class="card-text">Master HR functions including recruitment, compliance, and employee development.</p>
+                <div class="button-group">
+                    <button class="view-details-btn" onclick="openCourseDetails('hrhr')">View Details →</button>
+                    <button class="apply-btn" onclick="openApply('HR Human Resource Internship')">Apply Now</button>
+                </div>
+            </div>
+
+            <!-- 10. Business Development Internship -->
+            <div class="internship-card" data-course="bizdev">
+                <div class="card-shine"></div>
+                <div class="card-top">
+                    <h3>Business Development Internship</h3>
+                    <span class="duration">⏳ 45 Days</span>
+                </div>
+                <div class="skills">Strategy • Partnership • Growth • Market Analysis</div>
+                <p class="card-text">Learn business development strategies, partnerships, and growth hacking techniques.</p>
+                <div class="button-group">
+                    <button class="view-details-btn" onclick="openCourseDetails('bizdev')">View Details →</button>
+                    <button class="apply-btn" onclick="openApply('Business Development Internship')">Apply Now</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+        
+
+</section>
+
+<!-- Course Details Modal -->
+<div id="courseDetailsModal" class="course-details-modal">
+    <div class="details-modal-content">
+        <button class="close-details-btn" onclick="closeCourseDetails()">✕</button>
+        
+        <div class="details-header" id="detailsHeader"></div>
+        <div class="details-body" id="detailsBody"></div>
+    </div>
+</div>
+
+<!-- Secure Apply Modal -->
+<div id="applyModal" class="modal">
+
+    <div class="modal-box">
+
+        <div class="modal-left">
+            <h2>Secure Internship Application</h2>
+
+            <p>
+                Your details are protected with OTP verification
+                and secure payment processing.
+            </p>
+
+            <ul>
+                <li>✅ Secure OTP Verification</li>
+                <li>✅ Razorpay Payment Protection</li>
+                <li>✅ Enterprise Level Security</li>
+            </ul>
+        </div>
+
+        <div class="modal-right">
+
+            <h3 id="internshipTitle">
+                Apply Internship
+            </h3>
+
+            <input type="text"
+                   id="full_name"
+                   placeholder="Full Name">
+
+            <input type="email"
+                   id="email"
+                   placeholder="Email Address">
+
+            <input type="tel"
+                   id="mobile"
+                   placeholder="Mobile Number"
+                   maxlength="10">
+
+            <button onclick="submitInternshipApplication()">
+                Submit Application
+            </button>
+
+            <button onclick="closeApplyModal()"
+                    class="cancel-btn">
+                Cancel
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+<script>
+    window.RAZORPAY_KEY = "{{ razorpay_key_id }}";
+
+    // Course Details Data
+    const courseDetails = {
+        frontend: {
+            title: "Frontend Developer Intern",
+            duration: "3 Months",
+            icon: "🎨",
+            skills: ["HTML", "CSS", "JavaScript", "React"],
+            description: "Work on modern responsive UI projects and real-time frontend applications.",
+            outcomes: [
+                "Master responsive UI design and modern CSS frameworks",
+                "Build interactive React applications with state management",
+                "Implement real-time features using WebSockets and APIs",
+                "Work with design systems and component libraries",
+                "Deploy frontend applications on cloud platforms"
+            ],
+            prerequisites: "Basic knowledge of HTML/CSS recommended",
+            highlights: ["Live Projects", "Hands-on Experience", "Career Support"]
+        },
+        backend: {
+            title: "Backend Developer Intern",
+            duration: "45 Days",
+            icon: "⚙️",
+            skills: ["Python", "FastAPI", "MySQL", "APIs"],
+            description: "Build scalable backend systems, APIs, authentication, and secure server-side logic.",
+            outcomes: [
+                "Design and build RESTful APIs with FastAPI",
+                "Implement database design with MySQL optimization",
+                "Secure authentication and authorization systems",
+                "Deploy backend services on cloud infrastructure",
+                "Optimize database queries for high performance"
+            ],
+            prerequisites: "Basic Python knowledge recommended",
+            highlights: ["Industry Standards", "Real Databases", "API Design"]
+        },
+        fullstack: {
+            title: "Full Stack Developer Intern",
+            duration: "3 Months",
+            icon: "🔒",
+            skills: ["Python", "React", "SQL", "APIs"],
+            description: "Develop secure enterprise applications with payment-ready architecture and authentication best practices.",
+            outcomes: [
+                "Build end-to-end enterprise applications",
+                "Implement secure payment processing with Razorpay",
+                "Design scalable SQL databases",
+                "Create production-ready APIs and microservices",
+                "Deploy applications with enterprise security standards"
+            ],
+            prerequisites: "Basic understanding of web development",
+            highlights: ["Hands on Experience", "Payment Integration", "Certificate of Completion"]
+        },
+        marketing: {
+            title: "Digital Marketing Trainer",
+            duration: "2 Months",
+            icon: "📱",
+            skills: ["SEO", "Social Media", "Content Marketing", "Analytics"],
+            description: "Master digital marketing strategies and teach others to build successful online campaigns.",
+            outcomes: [
+                "Master SEO and search engine marketing strategies",
+                "Create engaging social media content and campaigns",
+                "Develop comprehensive marketing plans and strategies",
+                "Analyze data and optimize marketing performance",
+                "Build and mentor marketing teams"
+            ],
+            prerequisites: "Basic marketing knowledge and social media experience",
+            highlights: ["Real Campaigns", "Analytics Tools", "Industry Experts"]
+        },
+        business: {
+            title: "Business Skills Trainer",
+            duration: "2 Months",
+            icon: "💼",
+            skills: ["Management", "Finance", "Communication", "Leadership"],
+            description: "Develop comprehensive business training programs and mentor professionals.",
+            outcomes: [
+                "Master business management principles and practices",
+                "Develop financial literacy and analysis skills",
+                "Create effective communication strategies",
+                "Build leadership and team management capabilities",
+                "Design and deliver business training programs"
+            ],
+            prerequisites: "Business background or management experience",
+            highlights: ["Expert Mentorship", "Real Cases", "Leadership Focus"]
+        },
+        hr: {
+            title: "HR & Recruitment Trainer",
+            duration: "2 Months",
+            icon: "👥",
+            skills: ["Recruitment", "HR", "Soft Skills", "Compliance"],
+            description: "Guide professionals in human resources and talent acquisition best practices.",
+            outcomes: [
+                "Master modern recruitment strategies and tools",
+                "Develop HR policies and compliance frameworks",
+                "Build soft skills and professional development programs",
+                "Create employee engagement and retention strategies",
+                "Lead HR initiatives and transformations"
+            ],
+            prerequisites: "HR or recruitment experience preferred",
+            highlights: ["Compliance Expert", "Talent Management", "Modern Tools"]
+        },
+        digitalmarketing: {
+            title: "Digital Marketing Internship",
+            duration: "1 or 3 Months",
+            icon: "📈",
+            skills: ["Content Strategy", "SEO", "Analytics", "Campaign Planning"],
+            description: "Learn comprehensive digital marketing strategies and campaign management.",
+            outcomes: [
+                "Create high-impact digital marketing campaigns",
+                "Analyze performance with analytics tools",
+                "Build content calendars and audience funnels",
+                "Optimize campaigns across channels",
+                "Produce measurable ROI-driven results"
+            ],
+            prerequisites: "Basic marketing familiarity or social media experience",
+            highlights: ["Live Campaigns", "Data-Driven Training", "Performance Focus"]
+        },
+        googleads: {
+            title: "Meta & Google Ads Internship",
+            duration: "1 or 3 Months",
+            icon: "💡",
+            skills: ["Google Ads", "Meta Ads", "PPC", "Ad Optimization"],
+            description: "Master paid advertising platforms and optimize ad campaigns for maximum ROI.",
+            outcomes: [
+                "Build and scale search and social ad campaigns",
+                "Manage bidding, budgets, and targeting",
+                "Create conversion-focused ad creatives",
+                "Track campaign performance and optimize spend",
+                "Report results with clear ROI metrics"
+            ],
+            prerequisites: "Basic digital marketing or advertising interest",
+            highlights: ["PPC Mastery", "Ad Platform Skills", "Revenue Growth"]
+        },
+        socialmedia: {
+            title: "Social Media Marketing Internship",
+            duration: "1 or 3 Months",
+            icon: "📱",
+            skills: ["Social Strategy", "Content Creation", "Engagement", "Brand Voice"],
+            description: "Build and manage social media presence across all major platforms.",
+            outcomes: [
+                "Develop social media strategies for growth",
+                "Create engaging content calendars",
+                "Engage audiences and build communities",
+                "Measure social performance with analytics",
+                "Run platform-specific campaigns and ads"
+            ],
+            prerequisites: "Familiarity with social media platforms",
+            highlights: ["Content Strategy", "Community Building", "Brand Growth"]
+        },
+        aidesign: {
+            title: "AI Graphic Design Internship",
+            duration: "1 or 3 Months",
+            icon: "🎨",
+            skills: ["AI Design", "Branding", "Canva", "Figma"],
+            description: "Create stunning designs using AI-powered tools and modern design software.",
+            outcomes: [
+                "Design branded assets with AI workflows",
+                "Create social media and marketing graphics",
+                "Use design systems for consistent output",
+                "Collaborate on visual storytelling",
+                "Deliver polished design projects"
+            ],
+            prerequisites: "Basic graphic design or visual creativity",
+            highlights: ["AI Design Tools", "Portfolio Work", "Creative Production"]
+        },
+        aivideo: {
+            title: "AI Video Design Internship",
+            duration: "1 or 3 Months",
+            icon: "🎬",
+            skills: ["Video Editing", "AI Tools", "Motion Graphics", "Storyboarding"],
+            description: "Master video production and AI-powered video design for marketing campaigns.",
+            outcomes: [
+                "Produce AI-enhanced marketing videos",
+                "Edit and animate video content",
+                "Apply motion graphics for storytelling",
+                "Optimize videos for social channels",
+                "Deliver professional video assets"
+            ],
+            prerequisites: "Basic video editing or storytelling interest",
+            highlights: ["Video Automation", "Creative Motion", "Campaign Videos"]
+        },
+        ppc: {
+            title: "PPC Internship",
+            duration: "1 or 3 Months",
+            icon: "📊",
+            skills: ["PPC", "Keyword Research", "Bid Strategy", "Conversions"],
+            description: "Specialize in Pay-Per-Click campaigns and cost-effective advertising strategies.",
+            outcomes: [
+                "Set up PPC campaigns on search and display networks",
+                "Manage keyword bidding and budget allocation",
+                "Track conversions and improve performance",
+                "Write high-converting ad copy",
+                "Analyze campaigns for continuous optimization"
+            ],
+            prerequisites: "Interest in paid advertising and performance marketing",
+            highlights: ["Conversion Focus", "Ad Optimization", "Campaign Scaling"]
+        },
+        seosem: {
+            title: "SEO & SEM Internship",
+            duration: "1 or 3 Months",
+            icon: "🔎",
+            skills: ["SEO", "SEM", "Keywords", "Analytics"],
+            description: "Learn search engine optimization and marketing to drive organic and paid traffic.",
+            outcomes: [
+                "Optimize websites for search visibility",
+                "Run SEM campaigns with targeted budgets",
+                "Conduct keyword research and audits",
+                "Measure search performance and growth",
+                "Build sustainable traffic strategies"
+            ],
+            prerequisites: "Basic understanding of search marketing",
+            highlights: ["Search Growth", "Organic & Paid", "Traffic Strategy"]
+        },
+        operations: {
+            title: "Business Operations & Sales Internship",
+            duration: "1 or 3 Months",
+            icon: "💼",
+            skills: ["Sales", "CRM", "Operations", "Process"],
+            description: "Develop business operations and sales skills for enterprise growth and customer success.",
+            outcomes: [
+                "Support sales operations and CRM workflows",
+                "Learn business process optimization",
+                "Manage client relationships and sales pipelines",
+                "Improve operational efficiency",
+                "Deliver better customer experiences"
+            ],
+            prerequisites: "Interest in business operations or sales",
+            highlights: ["Operations Excellence", "Sales Support", "Business Growth"]
+        },
+        hrhr: {
+            title: "HR Human Resource Internship",
+            duration: "1 or 3 Months",
+            icon: "🧑‍💼",
+            skills: ["HR", "Recruitment", "Culture", "Compliance"],
+            description: "Master HR functions including recruitment, compliance, and employee development.",
+            outcomes: [
+                "Manage hiring and onboarding workflows",
+                "Support employee engagement initiatives",
+                "Implement HR policies and compliance",
+                "Train and mentor team members",
+                "Coordinate talent development programs"
+            ],
+            prerequisites: "Basic HR interest or people management skills",
+            highlights: ["People Operations", "Talent Support", "HR Best Practices"]
+        },
+        bizdev: {
+            title: "Business Development Internship",
+            duration: "1 or 3 Months",
+            icon: "🤝",
+            skills: ["Strategy", "Business Growth", "Partnerships", "Analysis"],
+            description: "Learn business development strategies, partnerships, and growth hacking techniques.",
+            outcomes: [
+                "Identify growth opportunities and partnerships",
+                "Support business outreach and negotiations",
+                "Analyze markets and customer needs",
+                "Build go-to-market strategies",
+                "Drive revenue initiatives"
+            ],
+            prerequisites: "Interest in business strategy and growth",
+            highlights: ["Growth Strategy", "Partnership Building", "Revenue Focus"]
+        }
+    };
+
+    function openCourseDetails(courseType) {
+        const course = courseDetails[courseType];
+        const modal = document.getElementById('courseDetailsModal');
+        const header = document.getElementById('detailsHeader');
+        const body = document.getElementById('detailsBody');
+
+        header.innerHTML = `
+            <div class="details-header-content">
+                <span class="details-icon">${course.icon}</span>
+                <div>
+                    <h2>${course.title}</h2>
+                    <span class="details-duration">⏳ ${course.duration}</span>
+                </div>
+            </div>
+        `;
+
+        let skillsHTML = course.skills.map(skill => `<span class="skill-tag">${skill}</span>`).join('');
+        let outcomesHTML = course.outcomes.map(outcome => `<li>${outcome}</li>`).join('');
+        let highlightsHTML = course.highlights.map(h => `<span class="highlight-badge">${h}</span>`).join('');
+
+        body.innerHTML = `
+            <div class="details-section">
+                <h3>📚 About This Program</h3>
+                <p>${course.description}</p>
+            </div>
+
+            <div class="details-section">
+                <h3>🛠️ Tech Stack</h3>
+                <div class="skills-container">
+                    ${skillsHTML}
+                </div>
+            </div>
+
+    
+
+            <div class="details-section">
+                <h3>⭐ Program Highlights</h3>
+                <div class="highlights-container">
+                    ${highlightsHTML}
+                </div>
+            </div>
+
+            <div class="details-section">
+                <h3>📋 Prerequisites</h3>
+                <p>${course.prerequisites}</p>
+            </div>
+
+            <button class="apply-modal-btn" onclick="closeCourseDetails(); openApply('${course.title}')">
+                Apply Now →
+            </button>
+        `;
+
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeCourseDetails() {
+        const modal = document.getElementById('courseDetailsModal');
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+
+    const cardImages = {
+        frontend: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80',
+        backend: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=900&q=80',
+        fullstack: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=900&q=80',
+        digitalmarketing: 'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=900&q=80',
+        googleads: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=900&q=80',
+        socialmedia: 'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=900&q=80',
+        aidesign: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80',
+        aivideo: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=900&q=80',
+        ppc: 'https://images.unsplash.com/photo-1556155092-490a1ba16284?auto=format&fit=crop&w=900&q=80',
+        seosem: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80',
+        operations: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=900&q=80',
+        hrhr: 'https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=900&q=80',
+        bizdev: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=900&q=80'
+    };
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const cards = document.querySelectorAll('.internship-card');
+        cards.forEach(card => {
+            const courseKey = card.dataset.course;
+            const imageUrl = cardImages[courseKey];
+            if (imageUrl && !card.querySelector('.card-image')) {
+                const imageWrapper = document.createElement('div');
+                imageWrapper.className = 'card-image';
+                const img = document.createElement('img');
+                img.src = imageUrl;
+                img.alt = `${card.querySelector('h3').textContent} image`;
+                img.onerror = function() {
+                    this.onerror = null;
+                    this.src = 'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=900&q=80';
+                };
+                imageWrapper.appendChild(img);
+                card.insertBefore(imageWrapper, card.firstChild);
+            }
+        });
+
+        const modal = document.getElementById('courseDetailsModal');
+        if(modal) {
+            modal.addEventListener('click', function(e) {
+                if(e.target === modal) {
+                    closeCourseDetails();
+                }
+            });
+        }
+    });
+</script>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+<script src="/static/script.js"></script>
+
+</body>
+</html>

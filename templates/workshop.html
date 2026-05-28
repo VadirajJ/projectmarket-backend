@@ -1,0 +1,230 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17917223846"></script>
+
+<script>
+window.dataLayer = window.dataLayer || [];
+
+function gtag(){
+dataLayer.push(arguments);
+}
+
+gtag('js', new Date());
+
+gtag('config', 'AW-17917223846');
+</script>
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Workshop Booking
+    </title>
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+    <!-- RAZORPAY -->
+    <script>
+        window.RAZORPAY_KEY = "{{ razorpay_key_id }}";
+    </script>
+
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+</head>
+
+<body>
+
+<section class="workshop-section">
+
+    <div class="workshop-container">
+
+        <!-- TITLE -->
+
+        <h1>
+            Workshop Booking
+        </h1>
+
+        <p>
+            Schedule your professional workshop
+            and receive certificate after completion.
+        </p>
+
+        <!-- FORM -->
+
+        <form id="workshopForm">
+
+            <!-- FULL NAME -->
+
+            <input type="text"
+                   id="name"
+                   placeholder="Full Name"
+                   required>
+
+            <!-- PHONE -->
+
+            <input type="tel"
+                   id="phone"
+                   placeholder="Phone Number"
+                   maxlength="10"
+                   required>
+
+            <!-- EMAIL -->
+
+            <input type="email"
+                   id="email"
+                   placeholder="Email Address"
+                   required>
+
+            <!-- CATEGORY -->
+
+            <select id="category" required>
+
+                <option value="">
+                    Select Category
+                </option>
+
+                <option value="IT">
+                    IT Workshops
+                </option>
+
+                <option value="Non-IT">
+                    Non-IT Workshops
+                </option>
+
+            </select>
+
+            <!-- WORKSHOP TYPE -->
+
+            <select id="type" required>
+
+                <option value="">
+                    Select Workshop Type
+                </option>
+
+            </select>
+
+            <!-- DATE -->
+
+            <input type="date"
+                   id="date"
+                   min="{{ current_date }}"
+                   required>
+
+            <!-- DURATION -->
+
+       <select id="hours" required>
+
+    <option value="">
+        Select Workshop Mode
+    </option>
+
+    <option value="1 Day">
+        One Day Workshop - ₹999
+    </option>
+
+    <option value="2 Days">
+        Two Day Workshop - ₹1499
+    </option>
+
+</select>
+
+            <!-- SLOT -->
+
+            <select id="time" required>
+
+                <option value="">
+                    Select Time Slot
+                </option>
+
+                <option value="09:00 AM - 12:00 PM">
+                    09:00 AM - 12:00 PM
+                </option>
+
+                <option value="10:00 AM - 01:00 PM">
+                    10:00 AM - 01:00 PM
+                </option>
+
+                <option value="02:00 PM - 05:00 PM">
+                    02:00 PM - 05:00 PM
+                </option>
+
+                <option value="03:00 PM - 06:00 PM">
+                    03:00 PM - 06:00 PM
+                </option>
+
+            </select>
+
+            <!-- SLOT INFO -->
+
+            <div class="slot-info">
+
+                Limited Seats Available Per Slot
+
+            </div>
+
+            <!-- PAYMENT INFO -->
+
+            <div class="payment-info">
+
+                <h3 id="priceText">
+
+                    Workshop Fee: ₹999
+
+                </h3>
+
+            </div>
+
+            <!-- TERMS -->
+
+            <div class="terms-box">
+
+                <input type="checkbox"
+                       id="terms"
+                       required>
+
+                <label for="terms">
+
+                    I agree to the Terms &
+                    Conditions and Refund Policy
+
+                </label>
+
+            </div>
+
+            <!-- BUTTON -->
+
+            <button type="submit">
+
+                Book Workshop
+
+            </button>
+
+            <!-- CERTIFICATE -->
+
+            <p class="certificate-info">
+
+                🎓 Certificate Provided After Completion
+
+            </p>
+
+        </form>
+
+    </div>
+
+</section>
+
+<!-- MAIN JAVASCRIPT -->
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>

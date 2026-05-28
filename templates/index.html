@@ -2,14 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17917223846"></script>
+
+<script>
+window.dataLayer = window.dataLayer || [];
+
+function gtag(){
+dataLayer.push(arguments);
+}
+
+gtag('js', new Date());
+
+gtag('config', 'AW-17917223846');
+</script>
   <title>CoreDe – software development and digital marketing </title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
   <!-- Add this for better touch handling -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="mobile-web-app-capable" content="yes">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;800;900&display=swap" rel="stylesheet">
   
 </head>
 
@@ -26,281 +41,320 @@
       
     </div>
     
+    <!-- Mobile Menu Button -->
+   <!-- <button class="mobile-menu-btn">
+      <i class="fas fa-bars"></i>
+    </button>-->
+    
 
     <nav class="menu">
-      <div class="nav-item mega-parent">
-        <a href="#">Digital Marketing ▾</a>
-        <div class="mega-menu">
-          <div class="mega-column">
-            <h4>Digital Marketing</h4>
-            <ul>
-              <li><a href="#">Influence Marketing</a></li>
-              <li><a href="#">Creative Advertising</a></li>
-              <li><a href="#">B2B Lead Generation</a></li>
-               <li><a href="#">Affiliate Marketing - AMAZON ADS</a></li>
-              <li><a href="#">Online Reputation Management</a></li>
-               <li><a href="#">Email Marketing</a></li>
-            </ul>
-          </div>
-          <div class="mega-column">
-            <h4>Brand Performance</h4>
-            <ul>
-              <li><a href="#">Performance Marketing</a></li>
-              <li><a href="#">PPC Services</a></li>
-              <li><a href="#">Media Buying</a></li>
-               <li><a href="#">AI Adoption</a></li>
-            </ul>
-          </div>
-          <div class="mega-column">
-            <h4>Social Media Marketing</h4>
-            <ul>
-               <li><a href="#">Instagram Marketing</a></li>
-              <li><a href="#">Facebook Marketing</a></li>
-              <li><a href="#">LinkedIn Marketing</a></li>
-              <li><a href="#">YouTube Monitize</a></li>
-            </ul>
-          </div>
-          <div class="mega-column">
-            <h4>Campaigns</h4>
-            <ul>
-              <li><a href="#">Search Engine Marketing - SEM</a></li>
-              <li><a href="#">Wider Audiance Reach</a></li>
-              <li><a href="#">Pecision Targeting</a></li>
-              <li><a href="#">Measurable Results & ROI</a></li>
-            </ul>
-          </div>
-          <div class="mega-column">
-            <h4>Search Engine Optimization</h4>
-            <ul>
-              <li><a href="#">SEO Overview</a></li>
-              <li><a href="#">Ecommerce SEO</a></li>
-              <li><a href="#">SEO Audit Services</a></li>
-              <li><a href="#">AI SEO</a></li>
-              <li><a href="#">Local SEO</a></li>
-              <li><a href="#">Link Building</a></li>
-              <li><a href="#">Conversion Rate Optimization</a></li>
-            </ul>
-          </div>
-        </div>
+  <div class="nav-item mega-parent">
+    <a href="#">Services ▾</a>
+    <div class="full-mega">
+
+      <!-- DIGITAL MARKETING -->
+      <div class="mega-column">
+        <h4>Digital Marketing</h4>
+        <ul>
+          <li>Influence Marketing</li>
+          <li>Creative Advertising</li>
+          <li>B2B Lead Generation</li>
+          <li>Affiliate Marketing - AMAZON ADS</li>
+          <li>Online Reputation Management</li>
+          <li>Email Marketing</li>
+        </ul>
       </div>
 
-      <div class="nav-item mega-parent">
-        <a href="#">Design ▾</a>
-        <div class="mega-menu">
-          <div class="mega-column">
-            <h4>Design</h4>
-            <ul>
-              <li><a href="#">Graphic Design</a></li>
-              <li><a href="#">Brand Identity</a></li>
-              <li><a href="#">Creative Design</a></li>
-              <li><a href="#">Marketing Collaterals</a></li>
-              <li><a href="#">Packaging Design</a></li>
-            </ul>
-          </div>
-          <div class="mega-column">
-            <h4>UI / UX</h4>
-            <ul>
-              <li><a href="#">UI Design</a></li>
-              <li><a href="#">UX Research</a></li>
-              <li><a href="#">Wireframing</a></li>
-              <li><a href="#">Prototyping</a></li>
-              <li><a href="#">Usability Testing</a></li>
-            </ul>
-          </div>
-          <div class="mega-column">
-            <h4>Web Design-without coding</h4>
-            <ul>
-              <li><a href="#">Website Design</a></li>
-              <li><a href="#">Landing Page Design</a></li>
-              <li><a href="#">E-commerce Design</a></li>
-              <li><a href="#">Responsive Design</a></li>
-            </ul>
-          </div>
-          <div class="mega-column">
-            <h4>Visual Content</h4>
-            <ul>
-              <li><a href="#">Infographics</a></li>
-              <li><a href="#">Presentation Design</a></li>
-              <li><a href="#">Social Media Creatives</a></li>
-              <li><a href="#">Banner Design</a></li>
-            </ul>
-          </div>
-          <div class="mega-column">
-            <h4>Brand Assets</h4>
-            <ul>
-              <li><a href="#">Logo Design</a></li>
-              <li><a href="#">Brand Guidelines</a></li>
-              <li><a href="#">Rebranding</a></li>
-              <li><a href="#">Illustrations</a></li>
-            </ul>
-          </div>
-        </div>
+      <div class="mega-column">
+        <h4>Brand Performance</h4>
+        <ul>
+          <li>Performance Marketing</li>
+          <li>PPC Services</li>
+          <li>Media Buying</li>
+          <li>AI Adoption</li>
+        </ul>
       </div>
 
-      <div class="nav-item mega-parent">
-        <a href="#">Content ▾</a>
-        <div class="mega-menu">
-          <div class="mega-column">
-            <h4>Content Strategy</h4>
-            <ul>
-              <li><a href="#">Content Marketing Strategy</a></li>
-              <li><a href="#">Editorial Planning</a></li>
-              <li><a href="#">Brand Storytelling</a></li>
-              <li><a href="#">Audience Research</a></li>
-              <li><a href="#">Content Audits</a></li>
-            </ul>
-          </div>
-          <div class="mega-column">
-            <h4>Written Content</h4>
-            <ul>
-              <li><a href="#">Website Content</a></li>
-              <li><a href="#">Blog Writing</a></li>
-              <li><a href="#">SEO Content Writing</a></li>
-              <li><a href="#">Technical Writing</a></li>
-              <li><a href="#">Product Descriptions</a></li>
-            </ul>
-          </div>
-          <div class="mega-column">
-            <h4>Creative Content</h4>
-            <ul>
-              <li><a href="#">Copywriting</a></li>
-              <li><a href="#">Ad Copy</a></li>
-              <li><a href="#">Social Media Content</a></li>
-              <li><a href="#">Email Campaign Content</a></li>
-            </ul>
-          </div>
-          <div class="mega-column">
-            <h4>Video & Media</h4>
-            <ul>
-              <li><a href="#">Video Scripts</a></li>
-              <li><a href="#">Concept Scripts</a></li>
-              <li><a href="#">Reels & Shorts</a></li>
-              <li><a href="#">Podcast Content</a></li>
-            </ul>
-          </div>
-          <div class="mega-column">
-            <h4>Optimization</h4>
-            <ul>
-              <li><a href="#">Content Optimization</a></li>
-              <li><a href="#">AI Content</a></li>
-              <li><a href="#">Conversion Copywriting</a></li>
-              <li><a href="#">Content Performance Tracking</a></li>
-            </ul>
-          </div>
-        </div>
+      <div class="mega-column">
+        <h4>Social Media Marketing</h4>
+        <ul>
+          <li>Instagram Marketing</li>
+          <li>Facebook Marketing</li>
+          <li>LinkedIn Marketing</li>
+          <li>YouTube Monetize</li>
+        </ul>
       </div>
 
-      <div class="nav-item mega-parent">
-        <a href="#">Production ▾</a>
-        <div class="mega-menu">
-          <div class="mega-column">
-            <h4>Video Production</h4>
-            <ul>
-              <li><a href="#">Corporate Videos</a></li>
-              <li><a href="#">Brand Films</a></li>
-              <li><a href="#">Product Videos</a></li>
-              <li><a href="#">Concept Videos</a></li>
-              <li><a href="#">Testimonial Videos</a></li>
-            </ul>
-          </div>
-          <div class="mega-column">
-            <h4>Advertising Films</h4>
-            <ul>
-              <li><a href="#">TV Commercials</a></li>
-              <li><a href="#">Digital Ads</a></li>
-              <li><a href="#">Social Media Ads</a></li>
-              <li><a href="#">Campaign Films</a></li>
-            </ul>
-          </div>
-          <div class="mega-column">
-            <h4>Photography</h4>
-            <ul>
-              <li><a href="#">Product Photography</a></li>
-              <li><a href="#">Corporate Shoots</a></li>
-              <li><a href="#">Lifestyle Photography</a></li>
-              <li><a href="#">Event Coverage</a></li>
-            </ul>
-          </div>
-          <div class="mega-column">
-            <h4>Animation</h4>
-            <ul>
-              <li><a href="#">2D Animation</a></li>
-              <li><a href="#">3D Animation</a></li>
-              <li><a href="#">Motion Graphics</a></li>
-              <li><a href="#">Animated Explainers</a></li>
-            </ul>
-          </div>
-          <div class="mega-column">
-            <h4>Post Production</h4>
-            <ul>
-              <li><a href="#">Video Editing</a></li>
-              <li><a href="#">Color Grading</a></li>
-              <li><a href="#">Sound Design</a></li>
-              <li><a href="#">Visual Effects (VFX)</a></li>
-            </ul>
-          </div>
-        </div>
+      <div class="mega-column">
+        <h4>Campaigns</h4>
+        <ul>
+          <li>Search Engine Marketing - SEM</li>
+          <li>Wider Audience Reach</li>
+          <li>Precision Targeting</li>
+          <li>Measurable Results & ROI</li>
+        </ul>
       </div>
 
-      <div class="nav-item mega-parent">
-        <a href="#">Technology ▾</a>
-        <div class="mega-menu">
-          <div class="mega-column">
-            <h4>Web Development</h4>
-            <ul>
-              <li><a href="#">Website Development</a></li>
-              <li><a href="#">CMS Development</a></li>
-              <li><a href="#">E-commerce Development</a></li>
-              <li><a href="#">Web Applications</a></li>
-              <li><a href="#">Custom Web Solutions</a></li>
-            </ul>
-          </div>
-          <div class="mega-column">
-            <h4>Mobile Development</h4>
-            <ul>
-              <li><a href="#">Android App Development</a></li>
-              <li><a href="#">iOS App Development</a></li>
-              <li><a href="#">Flutter Development</a></li>
-              <li><a href="#">React Native Apps</a></li>
-            </ul>
-          </div>
-          <div class="mega-column">
-            <h4>Backend & APIs</h4>
-            <ul>
-              <li><a href="#">API Development</a></li>
-              <li><a href="#">Database Design</a></li>
-              <li><a href="#">System Integration</a></li>
-              <li><a href="#">Cloud-Ready Applications</a></li>
-            </ul>
-          </div>
-          <div class="mega-column">
-            <h4>Cloud & DevOps</h4>
-            <ul>
-               <li><a href="#">PowerBI Dashboard Development</a></li>
-              <li><a href="#">AWS Services</a></li>
-              <li><a href="#">Azure Solutions</a></li>
-              <li><a href="#">CI/CD Pipelines</a></li>
-              <li><a href="#">Server Management</a></li>
-            </ul>
-          </div>
-          <div class="mega-column">
-            <h4>Emerging Tech</h4>
-            <ul>
-              <li><a href="#">AI & Machine Learning</a></li>
-              <li><a href="#">Chatbot Development</a></li>
-              <li><a href="#">IoT Applications</a></li>
-            </ul>
-          </div>
-        </div>
+      <div class="mega-column">
+        <h4>Search Engine Optimization</h4>
+        <ul>
+          <li>SEO Overview</li>
+          <li>Ecommerce SEO</li>
+          <li>SEO Audit Services</li>
+          <li>AI SEO</li>
+          <li>Local SEO</li>
+          <li>Link Building</li>
+          <li>Conversion Rate Optimization</li>
+        </ul>
       </div>
-    </nav>
+
+      <!-- DESIGN -->
+      <div class="mega-column">
+        <h4>Design</h4>
+        <ul>
+          <li>Graphic Design</li>
+          <li>Brand Identity</li>
+          <li>Creative Design</li>
+          <li>Marketing Collaterals</li>
+          <li>Packaging Design</li>
+        </ul>
+      </div>
+
+      <div class="mega-column">
+        <h4>UI / UX</h4>
+        <ul>
+          <li>UI Design</li>
+          <li>UX Research</li>
+          <li>Wireframing</li>
+          <li>Prototyping</li>
+          <li>Usability Testing</li>
+        </ul>
+      </div>
+
+      <div class="mega-column">
+        <h4>Web Design</h4>
+        <ul>
+          <li>Website Design</li>
+          <li>Landing Page Design</li>
+          <li>E-commerce Design</li>
+          <li>Responsive Design</li>
+        </ul>
+      </div>
+
+      <div class="mega-column">
+        <h4>Visual Content</h4>
+        <ul>
+          <li>Infographics</li>
+          <li>Presentation Design</li>
+          <li>Social Media Creatives</li>
+          <li>Banner Design</li>
+        </ul>
+      </div>
+
+      <div class="mega-column">
+        <h4>Brand Assets</h4>
+        <ul>
+          <li>Logo Design</li>
+          <li>Brand Guidelines</li>
+          <li>Rebranding</li>
+          <li>Illustrations</li>
+        </ul>
+      </div>
+
+      <!-- CONTENT -->
+      <div class="mega-column">
+        <h4>Content Strategy</h4>
+        <ul>
+          <li>Content Marketing Strategy</li>
+          <li>Editorial Planning</li>
+          <li>Brand Storytelling</li>
+          <li>Audience Research</li>
+          <li>Content Audits</li>
+        </ul>
+      </div>
+
+      <div class="mega-column">
+        <h4>Written Content</h4>
+        <ul>
+          <li>Website Content</li>
+          <li>Blog Writing</li>
+          <li>SEO Content Writing</li>
+          <li>Technical Writing</li>
+          <li>Product Descriptions</li>
+        </ul>
+      </div>
+
+      <div class="mega-column">
+        <h4>Creative Content</h4>
+        <ul>
+          <li>Copywriting</li>
+          <li>Ad Copy</li>
+          <li>Social Media Content</li>
+          <li>Email Campaign Content</li>
+        </ul>
+      </div>
+
+      <div class="mega-column">
+        <h4>Video & Media</h4>
+        <ul>
+          <li>Video Scripts</li>
+          <li>Concept Scripts</li>
+          <li>Reels & Shorts</li>
+          <li>Podcast Content</li>
+        </ul>
+      </div>
+
+      <div class="mega-column">
+        <h4>Optimization</h4>
+        <ul>
+          <li>Content Optimization</li>
+          <li>AI Content</li>
+          <li>Conversion Copywriting</li>
+          <li>Content Performance Tracking</li>
+        </ul>
+      </div>
+
+      <!-- PRODUCTION -->
+      <div class="mega-column">
+        <h4>Video Production</h4>
+        <ul>
+          <li>Corporate Videos</li>
+          <li>Brand Films</li>
+          <li>Product Videos</li>
+          <li>Concept Videos</li>
+          <li>Testimonial Videos</li>
+        </ul>
+      </div>
+
+      <div class="mega-column">
+        <h4>Advertising Films</h4>
+        <ul>
+          <li>TV Commercials</li>
+          <li>Digital Ads</li>
+          <li>Social Media Ads</li>
+          <li>Campaign Films</li>
+        </ul>
+      </div>
+
+      <div class="mega-column">
+        <h4>Photography</h4>
+        <ul>
+          <li>Product Photography</li>
+          <li>Corporate Shoots</li>
+          <li>Lifestyle Photography</li>
+          <li>Event Coverage</li>
+        </ul>
+      </div>
+
+      <div class="mega-column">
+        <h4>Animation</h4>
+        <ul>
+          <li>2D Animation</li>
+          <li>3D Animation</li>
+          <li>Motion Graphics</li>
+          <li>Animated Explainers</li>
+        </ul>
+      </div>
+
+      <div class="mega-column">
+        <h4>Post Production</h4>
+        <ul>
+          <li>Video Editing</li>
+          <li>Color Grading</li>
+          <li>Sound Design</li>
+          <li>Visual Effects (VFX)</li>
+        </ul>
+      </div>
+
+      <!-- TECHNOLOGY -->
+      <div class="mega-column">
+        <h4>Web Development</h4>
+        <ul>
+          <li>Website Development</li>
+          <li>CMS Development</li>
+          <li>E-commerce Development</li>
+          <li>Web Applications</li>
+          <li>Custom Web Solutions</li>
+        </ul>
+      </div>
+
+      <div class="mega-column">
+        <h4>Mobile Development</h4>
+        <ul>
+          <li>Android App Development</li>
+          <li>iOS App Development</li>
+          <li>Flutter Development</li>
+          <li>React Native Apps</li>
+        </ul>
+      </div>
+
+      <div class="mega-column">
+        <h4>Backend & APIs</h4>
+        <ul>
+          <li>API Development</li>
+          <li>Database Design</li>
+          <li>System Integration</li>
+          <li>Cloud-Ready Applications</li>
+        </ul>
+      </div>
+
+      <div class="mega-column">
+        <h4>Cloud & DevOps</h4>
+        <ul>
+          <li>PowerBI Dashboard Development</li>
+          <li>AWS Services</li>
+          <li>Azure Solutions</li>
+          <li>CI/CD Pipelines</li>
+          <li>Server Management</li>
+        </ul>
+      </div>
+
+      <div class="mega-column">
+        <h4>Emerging Tech</h4>
+        <ul>
+          <li>AI & Machine Learning</li>
+          <li>Chatbot Development</li>
+          <li>IoT Applications</li>
+        </ul>
+        
+      </div>
+
+    </div>
+    
+  </div>
+  <div class="nav-item">
+    <a href="/career">Careers ▾</a>
+  </div>
+
+    <div class="nav-item">
+    <a href="/internship">Internship ▾</a>
+  </div>
+
+<div class="nav-item">
+    <a href="{{ url_for('workshop') }}">
+        Workshop ▾
+    </a>
+</div>
+</nav>
 
     <!--pop up-->
 
 
     
  <div class="header-right">
-    <button class="quote-btn">Registration</button>
+       <div class="download-dropdown">
+    <button class="download-btn"> Brochure ⬇</button>
+
+    
+  <div class="dropdown-content">
+    <a href="{{ url_for('static', filename='Booklet.pdf') }}" download>
+      📄 Booklet
+    </a>
+    <a href="{{ url_for('static', filename='Broucher.pdf') }}" download>
+      📄 Broucher
+    </a>
+  </div>
+  </div>
   </div>
 
 
@@ -315,6 +369,9 @@
 
 <div class="mobile-menu">
   <div class="mobile-menu-content">
+    <button class="close-menu">
+      <i class="fas fa-times"></i>
+    </button>
     <a href="#">Digital Marketing</a>
     <a href="#">Design</a>
     <a href="#">Content</a>
@@ -328,52 +385,71 @@
 
 
 
-  <!-- HERO SLIDER -->
-<section class="hero">
-  <div class="swiper heroSwiper">
-    <div class="swiper-wrapper">
+ <!-- HERO STATIC SECTION -->
+<section class="hero-static">
+  <div class="hero-container">
 
-      <div class="swiper-slide">
-        <picture>
-          <source media="(max-width:768px)" srcset="{{ url_for('static', filename='images/Wow-mobile.png') }}">
-          <img src="{{ url_for('static', filename='images/Wow-mobile.png') }}" class="slide-img">
-        </picture>
-      </div>
+    <!-- LEFT TEXT -->
+<div class="hero-text">
+  <h1 class="hero-title">
+  Global IT <br>
+  Partner for <br>
 
-      <div class="swiper-slide">
-        <picture>
-          <source media="(max-width:768px)" srcset="{{ url_for('static', filename='images/Register-mobile.png') }}">
-          <img src="{{ url_for('static', filename='images/Register-mobile.png') }}" class="slide-img">
-        </picture>
-      </div>
+  <span class="green-line">Sustainable</span><br>
 
-      <div class="swiper-slide">
-        <picture>
-          <source media="(max-width:768px)" srcset="{{ url_for('static', filename='images/Pm-mobile.png') }}">
-          <img src="{{ url_for('static', filename='images/Pm-mobile.png') }}" class="slide-img">
-        </picture>
-      </div>
+  <span class="green-line">Growth</span> & <br>
 
-      <div class="swiper-slide">
-        <picture>
-          <source media="(max-width:768px)" srcset="{{ url_for('static', filename='images/Social-mobile.png') }}">
-          <img src="{{ url_for('static', filename='images/Social-mobile.png') }}" class="slide-img">
-        </picture>
-      </div>
+  Innovation.
+</h1>
 
-      <div class="swiper-slide">
-        <picture>
-          <source media="(max-width:768px)" srcset="{{ url_for('static', filename='images/Am-mobile.png') }}">
-          <img src="{{ url_for('static', filename='images/Am-mobile.png') }}" class="slide-img">
-        </picture>
-      </div>
+  <p class="hero-desc">
+  CoreDe Technologies is a premier 
+  <strong>Software Development Company in India</strong>, 
+  specializing in 
+  <strong>Custom Software Solutions</strong> 
+  and high-performance digital strategies for global enterprises.
+</p>
 
-    </div>
+  <div class="hero-buttons">
 
-    <div class="swiper-pagination"></div>
+  <!-- LEFT BUTTON -->
+<button class="quote-btn" onclick="openQuote()">
+  Request a Quote <span>→</span>
+</button>
+
+  <!-- RIGHT CALL BOX -->
+<a href="tel:+918951029849" class="call-box" onclick="handleCall(event)">
+  📞 91 8951029849
+</a>
+
+<!-- POPUP -->
+<div id="callPopup" class="call-popup">
+  <div class="popup-box">
+
+    <h3>Choose how to contact</h3>
+
+    <a href="https://wa.me/919008110807" target="_blank">
+      <span>💬</span> WhatsApp
+    </a>
+
+    <a href="skype:+919008110807?call">
+      <span>📞</span> Skype
+    </a>
+
+    <button onclick="closePopup()">Cancel</button>
+
+  </div>
+</div>
+
+</div>
+</div>
+
+<div class="hero-image">
+  <img src="{{ url_for('static', filename='images/Hello.png') }}" class="floating-img">
+</div>
+
   </div>
 </section>
-
     <!-- ADDS video -->
 <!-- Login Modal -->
 <div id="loginModal" class="modal">
@@ -399,9 +475,9 @@
              placeholder="Last Name" 
              required>
 
-      <input type="gmail" 
+      <input type="email" 
              name="gmail" 
-             id="gmail"
+             id="login_email"
              placeholder="Email Address" 
              required>
 
@@ -428,7 +504,7 @@
     <div class="error-content">
         <div class="error-icon">!</div>
         <h2>User Not Registered</h2>
-        <p>Please sign up first</p>
+        <p>Please Registration first</p>
     </div>
 </div>
 
@@ -461,128 +537,554 @@
   </p>
 </section>-->
 
+<!-- REQUEST QUOTE MODAL -->
+<div id="quoteModal" class="quote-modal">
 
-  <!-- SERVICES SECTION -->
-  <section class="services-section">
-    <h1 class="section-title" data-animation="fade-up">SERVICES</h1>
-    <p class="section-subtitle" data-animation="fade-up" data-delay="0.1s">
-      Rated as One Of The Top 10 Digital Marketing Agency In Bangalore, India
-    </p>
+  <div class="quote-container">
 
-    <div class="services-wrapper">
-      <div class="services-grid">
-        <div class="service-card" data-animation="fade-up">
-          <div class="service-icon">
-            <i class="fas fa-bullhorn"></i>
-          </div>
-          <h3>Digital Marketing</h3>
-          <p>
-            Digital is here to stay and grow exponentially. Increased visibility,
-            marketing opportunity at efficient budgets, and customer engagement.
-          </p>
-          <a href="#">Know More <i class="fas fa-arrow-right"></i></a>
-        </div>
-
-        <div class="service-card" data-animation="fade-up" data-delay="0.1s">
-          <div class="service-icon">
-            <i class="fas fa-pencil-ruler"></i>
-          </div>
-          <h3>Web Design</h3>
-          <p>
-            Never miss a customer again! High-performance UI/UX improves
-            conversions and customer retention across apps & websites.
-          </p>
-          <a href="#">Know More <i class="fas fa-arrow-right"></i></a>
-        </div>
-
-        <div class="service-card" data-animation="fade-up" data-delay="0.2s">
-          <div class="service-icon">
-            <i class="fas fa-globe"></i>
-          </div>
-          <h3>Software Development</h3>
-          <p>
-            Premium, high-performance websites and web portals built on secure,
-            scalable technologies.
-          </p>
-          <a href="#">Know More <i class="fas fa-arrow-right"></i></a>
-        </div>
-
-        <div class="service-card" data-animation="fade-up" data-delay="0.3s">
-          <div class="service-icon">
-            <i class="fas fa-search"></i>
-          </div>
-          <h3>Content</h3>
-          <p>
-           We create high-quality content including website copy, blogs, social media creatives, and marketing materials that tell your story effectively.
-          </p>
-          <a href="#">Know More <i class="fas fa-arrow-right"></i></a>
-        </div>
-
-        <div class="service-card" data-animation="fade-up" data-delay="0.4s">
-          <div class="service-icon">
-            <i class="fas fa-hashtag"></i>
-          </div>
-          <h3>Production</h3>
-          <p>
-            We offer product photography, video shoots, and promotional content that enhances your brand’s visual appeal.
-          </p>
-          <a href="#">Know More <i class="fas fa-arrow-right"></i></a>
-        </div>
-
-        <div class="service-card" data-animation="fade-up" data-delay="0.5s">
-          <div class="service-icon">
-            <i class="fas fa-mobile-alt"></i>
-          </div>
-          <h3>Mobile</h3>
-          <p>
-            Mobile app design and development that works like magic for users and
-            businesses.
-          </p>
-          <a href="#">Know More <i class="fas fa-arrow-right"></i></a>
-        </div>
+    <!-- HEADER -->
+    <div class="quote-header">
+      <div>
+        <h3>Request a Quote</h3>
+        <p>We respond within 24 hours</p>
+      </div>
+      <button class="close-btn" onclick="closeQuote()">×</button>
     </div>
 
-      <div class="quote-box" data-animation="fade-left">
-        <h3>Registration</h3>
-        <form id="quote-form">
-          <input type="text" id="name" placeholder="Enter Name" required>
-          <div class="error-message" id="name-error"></div>
-          
-          <input type="email" id="email" placeholder="Enter Email" required>
-          <div class="error-message" id="email-error"></div>
-          
-          <input type="tel" id="mobile" placeholder=" Mobile Number" required>
-          <div class="error-message" id="mobile-error"></div>
-          
-          <input type="text" id="company" placeholder="Enter Business Name" required>
-          <div class="error-message" id="company-error"></div>
-          
-          <input type="text" id="designation" placeholder="Enter Designation" required>
-          <div class="error-message" id="designation-error"></div>
-          
-          
-          <!--- dropdown -->
-          <select id="service" required>
-            <option value="">Select a service</option>
-            <option value="Digital Marketing">Digital Marketing</option>
+    <!-- FORM -->
+    <form class="quote-form" id="quote-form" novalidate>
+
+      <div class="form-group">
+        <input type="text"
+               id="name"
+               placeholder="Full Name *"
+               required>
+        <small id="name-error" class="error-message"></small>
+      </div>
+
+      <div class="row">
+        <div class="form-group">
+          <input type="email"
+                 id="email"
+                 placeholder="Email Address *"
+                 required>
+          <small id="email-error" class="error-message"></small>
+        </div>
+
+        <div class="form-group">
+          <input 
+                 type="tel"
+                 id="mobile"
+                 placeholder="Phone Number *"
+                 maxlength="10"
+                 inputmode="numeric"
+                 required>
+          <small id="mobile-error" class="error-message"></small>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <input type="text"
+               id="company"
+               placeholder="Company Name *"
+               required>
+        <small id="company-error" class="error-message"></small>
+      </div>
+
+      <div class="form-group">
+        <input type="text"
+               id="designation"
+               placeholder="Designation *"
+               required>
+        <small id="designation-error" class="error-message"></small>
+      </div>
+
+      <div class="form-group">
+        <select id="service" required>
+          <option value="">Select Service *</option>
+          <optgroup label="IT Services">
             <option value="Web Development">Web Development</option>
             <option value="Mobile App">Mobile App</option>
-          </select>
-          <div class="error-message" id="service-error"></div>
+            <option value="Software Development">Software Development</option>
+            <option value="Cloud Services">Cloud Services</option>
+            <option value="IT Support">IT Support</option>
+          </optgroup>
+          <optgroup label="Non IT Services">
+            <option value="Digital Marketing">Digital Marketing</option>
+            <option value="Social Media Marketing">Social Media Marketing</option>
+            <option value="AI Graphic Design">AI Graphic Design</option>
+            <option value="PPC">PPC</option>
+            <option value="Meta & Google Ads">Meta & Google Ads</option>
+            <option value="SEO/SEM">SEO/SEM</option>
+          </optgroup>
+        </select>
+        <small id="service-error" class="error-message"></small>
+      </div>
 
-          <textarea id="message" placeholder="Let Us Know What You Need Help With" required></textarea>
-          <div class="error-message" id="message-error"></div>
+      <div class="form-group">
+        <textarea id="message"
+                  placeholder="Project Details *"
+                  required></textarea>
+        <small id="message-error" class="error-message"></small>
+      </div>
 
-          <button type="submit" id="submit-btn">Submit</button>
-        </form>
-        <p class="quote-text">
-          We are a Design and Digital Marketing Agency in India providing design,
-          development and digital solutions for over 400+ clients across the globe.
-        </p>
+      <button class="submit-btn"
+              id="submit-btn"
+              type="submit">
+        Submit Quote Request →
+      </button>
+
+      <p class="secure">🔒 Your information is secure</p>
+
+    </form>
+
+  </div>
+</div>
+
+
+<section class="market-section">
+
+  <div class="market-header">
+    <p class="market-tag">MARKET EVIDENCE</p>
+
+    <h2>
+      Research from 
+      <span class="highlight">Google & HubSpot</span><br>
+      proves: 70% of B2B buyers search<br>
+      via Mobile.
+    </h2>
+  </div>
+
+  <div class="market-cards">
+
+    <div class="market-card">
+      <div class="icon orange">⚡</div>
+      <h3>Speed Optimized</h3>
+      <p>
+        Every piece of software we ship is optimized for millisecond-level
+        responsiveness. Performance isn’t just a feature; it’s our baseline.
+      </p>
+    </div>
+
+    <div class="market-card">
+      <div class="icon green">🔍</div>
+      <h3>SEO Integrated</h3>
+      <p>
+        We build code that search engines love. From structural Schema to semantic
+        HTML5, your visibility is baked into the development.
+      </p>
+    </div>
+
+    <div class="market-card">
+      <div class="icon pink">📱</div>
+      <h3>Mobile First</h3>
+      <p>
+        Our designs prioritize the mobile touchpoint first, ensuring a seamless
+        high-convert UX across every device and browser.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+<!-- SERVICE MATRIX SECTION -->
+<section class="matrix-section">
+
+  <div class="matrix-header">
+    <p class="matrix-tag">SERVICE EXCELLENCE PILLARS</p>
+
+    <div class="matrix-top">
+      <h2>
+        The Corede <span>Service Matrix</span>:<br>
+        Engineering B2B Dominance.
+      </h2>
+
+  
+    </div>
+
+    <p class="matrix-desc">
+      We provide a full-spectrum technology stack designed to empower global enterprises
+      with a resilient, scalable, and highly performant digital footprint.
+    </p>
+  </div>
+
+  <div class="matrix-grid">
+
+    <!-- CARD -->
+        <div class="matrix-card">
+      <div class="icon-box green"><i class="fas fa-desktop"></i></div>
+      <h3>Web Development</h3>
+      <p>Enterprise-grade scalable web portals and applications.</p>
+
+      <div class="tags">
+        <span>PORTALS</span><span>DASHBOARDS</span><span>FINTECH</span>
+      </div>
+
+      <div class="highlight">
+        <span></span>
+        Improved Core Web Vitals by 40% for global portal.
       </div>
     </div>
-  </section>
 
+        <div class="matrix-card">
+      <div class="icon-box pink"><i class="fas fa-mobile-alt"></i></div>
+      <h3>Mobile App Development</h3>
+      <p>High-performance mobile apps (iOS, Android, Flutter).</p>
+
+      <div class="tags">
+        <span>IOS</span><span>ANDROID</span><span>FLUTTER</span>
+      </div>
+
+      <div class="highlight red-dot">
+        <span></span>
+        Logistics app used by 1000+ drivers.
+      </div>
+    </div>
+
+        <div class="matrix-card">
+      <div class="icon-box red"><i class="fas fa-cubes"></i></div>
+      <h3>Ecommerce Development</h3>
+      <p>High-volume platforms with 99.9% uptime and seamless checkout.</p>
+
+      <div class="tags">
+        <span>SHOPIFY</span><span>MAGENTO</span><span>WORDPRESS</span>
+      </div>
+
+      <div class="highlight red-dot">
+        <span></span>
+        Multi-vendor marketplaces with zero downtime at peak.
+      </div>
+    </div>
+
+        <div class="matrix-card">
+      <div class="icon-box yellow"><i class="fas fa-link"></i></div>
+      <h3>Digital Marketing</h3>
+      <p>Traffic is vanity; conversion is sanity. Our Growth Marketing focuses on maximizing ROAS through rigorous data attribution, omni-channel funnels, and technical SEO excellence.</p>
+
+      <div class="tags">
+        <span>Performance Marketing</span><span>360-Degree SEO</span>
+      </div>
+
+      <div class="highlight yellow-dot">
+        <span></span>
+        
+Spotlight: Achieved a 4.5x ROAS for a SaaS firm within the first 120 days of performance-led marketing overhaul.
+      </div>
+    </div>
+
+    <div class="matrix-card">
+      <div class="icon-box green"><i class="fas fa-microchip"></i></div>
+      <h3>Technologies We Cover</h3>
+      <p>Mastery over industry stacks from Java, Python to MERN and Next.js.</p>
+
+      <div class="tags">
+        <span>PHP</span><span>JAVA</span><span>PYTHON</span><span>MERN</span>
+      </div>
+
+      <div class="highlight">
+        <span></span>
+        Architected high-concurrency systems processing millions daily.
+      </div>
+    </div>
+
+    <!-- CARD -->
+
+
+    <!-- CARD -->
+
+
+    <!-- CARD -->
+
+
+    <!-- CARD -->
+
+
+    <!-- CARD -->
+    <div class="matrix-card">
+      <div class="icon-box green"><i class="fas fa-database"></i></div>
+      <h3>Custom Software Development</h3>
+      <p>ERP, CRM, and enterprise systems tailored to workflow.</p>
+
+      <div class="tags">
+        <span>ERP</span><span>CRM</span><span>HRM</span>
+      </div>
+
+      <div class="highlight">
+        <span></span>
+        Reduced operational cost by 65%.
+      </div>
+    </div>
+
+    <!-- BIG CARD -->
+
+
+  </div>
+
+</section>
+
+<section class="process-section">
+
+  <div class="process-header">
+    <p>OUR METHODOLOGY</p>
+    <h2>
+      The <span>Enterprise Delivery</span> Framework.
+    </h2>
+  </div>
+
+  <div class="process-container">
+
+    <div class="process-line"></div>
+
+    <!-- STEP -->
+    <div class="process-card">
+      <div class="icon-box"><i class="fas fa-search"></i></div>
+      <h3>Define</h3>
+      <p>Deep requirement gathering and KPI alignment.</p>
+    </div>
+
+    <div class="process-card">
+      <div class="icon-box"><i class="fas fa-paint-brush"></i></div>
+      <h3>Design</h3>
+      <p>Interactive Wireframes and UI/UX prototypes.</p>
+    </div>
+
+    <div class="process-card">
+      <div class="icon-box"><i class="fas fa-code"></i></div>
+      <h3>Develop</h3>
+      <p>Agile sprints with CI/CD deployments.</p>
+    </div>
+
+    <div class="process-card">
+      <div class="icon-box"><i class="fas fa-globe"></i></div>
+      <h3>Deploy</h3>
+      <p>Cloud optimization and go-live security.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="tech-section">
+
+  <div class="tech-header">
+    <p>TECHNOLOGY STACK</p>
+    <h2>Mission-Critical Technologies We Master.</h2>
+  </div>
+
+  <div class="tech-grid">
+
+    <!-- FRONTEND -->
+    <div class="tech-group">
+      <h4>FRONTEND</h4>
+      <div class="tech-items">
+        <span>React</span>
+        <span>Next.js</span>
+        <span>TypeScript</span>
+        <span>Vue.js</span>
+        <span>Angular</span>
+      </div>
+    </div>
+
+    <!-- BACKEND -->
+    <div class="tech-group">
+      <h4>BACKEND</h4>
+      <div class="tech-items">
+        <span>Node.js</span>
+        <span>.Net Core</span>
+        <span>Laravel</span>
+        <span>Python</span>
+        <span>Go</span>
+      </div>
+    </div>
+
+    <!-- DATABASE -->
+    <div class="tech-group">
+      <h4>DATABASE</h4>
+      <div class="tech-items">
+        <span>PostgreSQL</span>
+        <span>MongoDB</span>
+        <span>MySQL</span>
+        <span>Redis</span>
+        <span>ElasticSearch</span>
+      </div>
+    </div>
+
+    <!-- CLOUD -->
+    <div class="tech-group">
+      <h4>CLOUD & DEVOPS</h4>
+      <div class="tech-items">
+        <span>AWS</span>
+        <span>Azure</span>
+        <span>Docker</span>
+        <span>Kubernetes</span>
+        <span>Terraform</span>
+      </div>
+    </div>
+
+    <!-- BLOCKCHAIN -->
+    <div class="tech-group full">
+      <h4>BLOCKCHAIN</h4>
+      <div class="tech-items">
+        <span>Ethereum</span>
+        <span>Solidity</span>
+        <span>Polkadot</span>
+        <span>Rust</span>
+        <span>Hyperledger</span>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="mobile-first-section">
+
+  <div class="mobile-container">
+
+    <!-- LEFT IMAGE -->
+    <div class="mobile-image">
+      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="mountain">
+
+      <!-- FLOATING CARD -->
+      <div class="floating-card">
+        <p class="tag">📱 B2B TREND</p>
+        <h4>"70% of B2B buyers now research exclusively via Mobile."</h4>
+        <small>— Source: Google/HubSpot Research</small>
+      </div>
+    </div>
+
+    <!-- RIGHT CONTENT -->
+    <div class="mobile-content">
+
+      <p class="top-tag">EVIDENCE-BASED DEVELOPMENT</p>
+
+      <h2>
+        Why a <span>Mobile-First</span><br>
+        Approach is Non-Negotiable.
+      </h2>
+
+      <p class="desc">
+        The B2B buying journey has undergone a massive paradigm shift.
+        High-ticket decision-makers are no longer tethered to desktops.
+        They research, compare, and engage on the go.
+      </p>
+
+      <p class="desc">
+        Our <strong>Speed-Optimized development</strong> ensures seamless
+        performance across all devices and networks.
+      </p>
+
+      <!-- BUTTON TAGS -->
+      <div class="mobile-tags">
+        <span>⚡ Sub-2s Load Time</span>
+        <span>📈 Enhanced ROAS</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="consult-section">
+
+  <div class="consult-header">
+    <p class="tag">STRATEGIC PILLAR DISCOVERY</p>
+    <h2>
+      Not Sure Where to Start?
+      <span>Find Your Pillar.</span>
+    </h2>
+    <p class="sub">
+      Use our interactive consultant to identify the high-impact solution for your business.
+    </p>
+  </div>
+
+  <div class="consult-box">
+
+    <p class="step">STEP 1 OF 2</p>
+    <h3>What is your primary digital objective?</h3>
+
+    <div class="consult-grid">
+
+      <div class="consult-card">
+        <div class="icon">📈</div>
+        <p>Maximize ROI & Sales</p>
+      </div>
+
+      <div class="consult-card">
+        <div class="icon">⚙️</div>
+        <p>Scale Tech Infrastructure</p>
+      </div>
+
+      <div class="consult-card">
+        <div class="icon">💻</div>
+        <p>Launch High-Perf Website</p>
+      </div>
+
+      <div class="consult-card">
+        <div class="icon">📱</div>
+        <p>Build Mobile Ecosystem</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="faq-section">
+
+  <div class="faq-header">
+    <p>COMMON ENQUIRIES</p>
+    <h2>FAQs & <span>Expert Insights.</span></h2>
+  </div>
+
+  <div class="faq-container">
+
+    <!-- ITEM -->
+    <div class="faq-item">
+      <div class="faq-question">
+        Why choose an India-based Offshore Development Team for my software?
+        <span>⌄</span>
+      </div>
+      <div class="faq-answer">
+        India offers cost-effective, highly skilled developers with strong communication and global experience.
+      </div>
+    </div>
+
+    <div class="faq-item active">
+      <div class="faq-question">
+        What exactly is AI Engine Optimization (AIEO)?
+        <span>⌄</span>
+      </div>
+      <div class="faq-answer">
+        AIEO ensures your brand is optimized for AI-driven search engines like ChatGPT, Gemini, and SGE.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        How does Corede Technologies handle data security in  Development?
+        <span>⌄</span>
+      </div>
+      <div class="faq-answer">
+        We implement secure smart contracts, encryption, and decentralized architecture.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        What is your typical project delivery timeline?
+        <span>⌄</span>
+      </div>
+      <div class="faq-answer">
+        Timelines vary but typically range from 2–12 weeks depending on complexity.
+      </div>
+    </div>
+
+  </div>
+
+</section>
 
 <!-- Instagram (LEFT SIDE) -->
 <!-- Social Icons Container (RIGHT) -->
@@ -629,7 +1131,10 @@
   </div>
 </section>-->
 
+<!-- CHATBOT -->
+<!--<div class="chatbot-wrapper">
 
+   FLOAT BUTTON -->
 
 <!--clients move on-->
 <!-- TECH / CLIENT LOGOS SLIDER -->
@@ -869,15 +1374,27 @@
 
 
   
-      <div class="footer-section">
-        <h4>Quick Links</h4>
-        <a href="#">Home</a>
-        <a href="/about">About</a>
-        <a href="#">Services</a>
-        <a href="#">Portfolio</a>
-        <a href="#">Contact</a>
-        
-      </div>
+ <div class="footer-section">
+    <h4>Quick Links</h4>
+
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/internship">Internship</a>
+
+    <a href="/privacy-policy">Privacy Policy</a>
+
+    <a href="/terms-and-conditions">
+        Terms & Conditions
+    </a>
+
+    <a href="/refund-policy">
+        Refund Policy
+    </a>
+
+    <a href="/contact">
+        Contact Us
+    </a>
+</div>
       <div class="footer-section">
         <h4>Services</h4>
         <a href="#">Digital Marketing</a>
@@ -889,8 +1406,8 @@
         <h4>Contact</h4>        
         <p><i class="fas fa-phone"></i> Contact us: +91 9008110807</p>
         <p><i class="fas fa-phone"></i> Contact us: +91 8951029849</p>
-        <p><i class="fas fa-envelope"></i> info@corede.com</p>
-        <p><i class="fas fa-envelope"></i> support@corede.co</p>
+        <!--<p><i class="fas fa-envelope"></i> Coredecom@gmail.com</p>
+        <p><i class="fas fa-envelope"></i> Coredecompany@gmail.com</p>-->
         
       </div>
       
@@ -915,14 +1432,18 @@
 </iframe>
 
   </div>
+  
 
 
     <div class="footer-bottom">
       <p>&copy; 2026 CoreDe Software development and Digital Marketing LLP. All rights reserved.</p>
     </div>
+
+
+
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
   <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
